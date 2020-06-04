@@ -1,0 +1,23 @@
+[GLOBAL_VAR]
+AppPlayerManagerFullPath=C:\Program Files (x86)\Windroye\AppPlayer Manager.exe
+InstanceCount=2
+Instance1Name=Windroye1
+Instance2Name=Windroye2
+
+; english23
+[Windroye1]
+UseFriend=0
+UpgradeMineral=6
+InGameZoom=0
+IsChangingTeam=1
+PeriodOfChangingTeam=3000
+UseUnbeatable=0
+
+; hbesthee
+[Windroye2]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=0
+IsChangingTeam=1
+PeriodOfChangingTeam=3000
+UseUnbeatable=0

@@ -1,0 +1,177 @@
+[GLOBAL_VAR]
+;AppPlayerManagerFullPath=C:\Util\Nox\bin\MultiPlayerManager.exe
+AppPlayerManagerFullPath=C:\Users\hanwh\AppData\Roaming\Nox\bin\MultiPlayerManager.exe
+Instance=1
+
+[Repeat LAB]
+; 재료 생산 여부
+isCraftMatirial=0
+isUltimate=0
+isAsendingGrade=0
+nMatirialScrollCount=6
+nMaririalClickY=257
+; 4/257 = Brown Coffee : 6/257 : 부장님 핫도그
+
+[ADVENT STAGE]
+AutoCombat=0
+; 자동전투 사용 여부 : 0 = 사용안함, 
+RoomIndex=2
+; 무찌를 적의 위치 : 0~2
+Difficult=2
+; 무찌를 적의 난이도 : 0~5
+ProduceRanger0=0
+; #번 레인저 생산 여부 ; 자동전투 최초 생산 레인저에도 적용됨
+ProduceRanger1=0
+ProduceRanger2=1
+ProduceRanger3=1
+ProduceRanger4=1
+
+[TEAM_BATTLE]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3000
+UseUnbeatable=0
+
+[GUILD_RAID]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=1
+PeriodOfChangingTeam=2900
+UseUnbeatable=0
+
+[CHALLENGE_STAGE]
+UseFriend=0
+UpgradeMineral=5
+InGameZoom=1
+IsChangingTeam=1
+PeriodOfChangingTeam=3300
+UseUnbeatable=0
+
+[NORMAL_STAGE]
+UseFriend=0
+UpgradeMineral=6
+InGameZoom=1
+IsChangingTeam=1
+PeriodOfChangingTeam=3000
+UseUnbeatable=0
+; 공략할 레벨의 입장을 위한 X 좌표 = 400 가운데 위치 : Level 297 = 95
+MousePosX4EnterLevel=95
+; 다음 전투를 시작하기 전에 대기할 시간(단위 : 분 ; 5 이상의 값을 적어야 함)
+DelayForNextCombat=20
+; 한번에 깰 MainStage의 개수 : 기본값 5
+ClearMaxCount=3
+
+[SPECIAL_STAGE_HELL6]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=10
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=16
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_HELL5]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=9
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=14
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_HELL4]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=10
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_HELL2]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=10
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_HARD5]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=10
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_HARD2]
+UseFriend=0
+UpgradeMineral=0
+InGameZoom=1
+IsChangingTeam=0
+PeriodOfChangingTeam=3300
+UseUnbeatable=1
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+
+[SPECIAL_STAGE_ND]
+UseFriend=0
+UpgradeMineral=7
+InGameZoom=1
+IsChangingTeam=1
+PeriodOfChangingTeam=3300
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 무적(Invincible)를 사용함. 1이면 바로 사용하고, 0이면 사용안함
+UseUnbeatable=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함
+UseTornado=0
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
+UseIceShot=8
+; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
+UseMeteor=0
+DelayForNextCombat=0
+
+[SPECIAL_STAGE_EVENT6]
+IsChangingTeam=0
+UseUnbeatable=1
+
+[SPECIAL_STAGE_EVENT5]
+IsChangingTeam=0
+UseUnbeatable=1
+
+[SPECIAL_STAGE_EVENT4]
+IsChangingTeam=0
+UseUnbeatable=1

@@ -1,0 +1,15 @@
+; 여러개의 Line Rangers를 대기하면서, 선물함의 우정 포인트를 확인 및 수령하는데 
+; 필요한 각정 설정 정보를 관리하는 INI 파일
+[GLOBAL_VAR]
+AppPlayerManagerFullPath=C:\Program Files (x86)\Windroye\AppPlayer Manager.exe
+Instance=2
+
+[1]
+TITLE=Windroye1
+EMAIL=english23@naver.com
+CAPTURE_FOLDER=C:\AutoHotKey
+
+[2]
+TITLE=Windroye2
+EMAIL=hbesthee@naver.com
+CAPTURE_FOLDER=C:\AutoHotKey
