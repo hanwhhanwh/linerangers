@@ -32,12 +32,15 @@ g_arrColorBattle			:= [ [237, 268, 0x17110B], [238, 382, 0x3A1B00], [239, 381, 0
 ; 전투가 종료되었는지 확인하는 색조합
 g_arrColorEventStageResult	:= [ [519, 156, 0xFF0000], [447, 164, 0xFFE63D], [255, 155, 0x8F0000] ]
 
+g_arrColorHeal		:= [ [170, 55, 0x979797] ]
+g_arrColorSpeedUp	:= [ [220, 41, 0x979797] ]
+g_arrColorShield	:= [ [270, 65, 0x979797] ]
 
 
 
 CheckAppPlayer( g_nInstance, false ) ; 실행 인스턴스를 활성화
 CreateLogWindow()
-AppendLogWindow( "Start EventStage Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
+AppendLogWindow( "Start EVENT_STAGE Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
 
 
 if ( !IsSimilarColorSet( g_arrColorSetEventStage ) )
@@ -71,7 +74,7 @@ if ( WaitColorSet( g_arrColorEventTeam, 30 ) = 0 )
 
 ClickClientPoint( 400, 415, 500 ) ; Click "START"
 
-;;; Produce Rangers
+;;; In battle : Produce Rangers / Use Items
 While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 {
 	ProduceRanger( 225 )
@@ -80,6 +83,13 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 	ProduceRanger( 475 )
 	ProduceRanger( 560 )
 	Sleep 100
+
+	if ( !IsSimilarColorSet(g_arrColorHeal) )
+		ClickClientPoint( 170, 55, 100 ) ; Use heal
+	if ( !IsSimilarColorSet(g_arrColorSpeedUp) )
+		ClickClientPoint( 220, 41, 100 ) ; Use speed up
+	if ( !IsSimilarColorSet(g_arrColorShield) )
+		ClickClientPoint( 270, 65, 100 ) ; Use shield
 }
 
 Sleep 1000
