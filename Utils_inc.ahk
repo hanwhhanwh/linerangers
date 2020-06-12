@@ -591,7 +591,7 @@ ProduceRanger(ByRef nRangerPosX, ByRef nRangerPosY := 454)
 	global g_nClientX, g_nClientY
 
 	PixelGetColor, clrRangerColor, nRangerPosX + g_nClientX, nRangerPosY + g_nClientY, RGB
-	if ( IsSimilarColor(clrRangerColor, 0x16192E) or IsSimilarColor(clrRangerColor, 0x101941) or IsSimilarColor(clrRangerColor, 0x34052F) or IsSimilarColor(clrRangerColor, 0x351407) )
+	if ( IsSimilarColor(clrRangerColor, 0x16192E) or IsSimilarColor(clrRangerColor, 0x091735) or IsSimilarColor(clrRangerColor, 0x34002E) or IsSimilarColor(clrRangerColor, 0x351407) )
 	{
 		ClickClientPoint( nRangerPosX, nRangerPosY )
 		Sleep 50
