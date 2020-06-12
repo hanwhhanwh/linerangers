@@ -21,9 +21,6 @@ if ( !InitializeLineRangers() )
 	ExitApp, 0
 }
 
-;;; Load EventStage Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-IniRead, g_nDifficulty, LineRangers.ini, EVENT_STAGE, Difficulty, 0
-
 ;;; Definition ColorSet ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Event Stage 화면인지 확인할 때의 색조합
@@ -39,13 +36,22 @@ g_arrColorEventStageResult	:= [ [519, 156, 0xFF0000], [447, 164, 0xFFE63D], [255
 
 
 CheckAppPlayer( g_nInstance, false ) ; 실행 인스턴스를 활성화
+CreateLogWindow()
 AppendLogWindow( "Start EventStage Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
+
 
 if ( !IsSimilarColorSet( g_arrColorSetEventStage ) )
 {
 	MsgBox Run with 'EVENT STAGE'.
 	ExitApp, 0
 }
+
+
+EVENT_STAGE_LOOP:
+
+;;; Load EventStage Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+IniRead, g_nDifficulty, LineRangers.ini, EVENT_STAGE, Difficulty, 0
+
 
 ClickClientPoint( 150, 355, 500 ) ; "BATTLE" click
 ; SELECT Level of Difficulty
@@ -79,8 +85,16 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 Sleep 1000
 ClickClientPoint( 400, 415, 500 )
 
+if ( WaitColorSet( g_arrColorSetEventStage, 30 ) = 0 )
+{
+	AppendLogWindow( "[EVENT_STAGE] Move error : move fail EVENT_STAGE main" )
+	MsgBox, [EVENT_STAGE] Move error : move fail EVENT_STAGE main
+	ExitApp, 0
+}
 
-ExitApp, 0
+Goto, EVENT_STAGE_LOOP
+
+
 
 #b::
 GUI_EXIT:
