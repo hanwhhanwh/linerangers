@@ -78,7 +78,7 @@ ClickClientPoint( 400, 415, 500 ) ; Click "START"
 
 ;;; In battle : Produce Rangers / Use Items
 g_nBattleCount := g_nBattleCount + 1
-AppendLogWindow( "[EVENT_STAGE] in battle..." )
+AppendLogWindow( "[EVENT_STAGE] in battle. Difficulty = " + g_nDifficulty )
 While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 {
 	ProduceRanger( 225 )
