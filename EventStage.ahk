@@ -54,6 +54,7 @@ EVENT_STAGE_LOOP:
 
 ;;; Load EventStage Settings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 IniRead, g_nDifficulty, LineRangers.ini, EVENT_STAGE, Difficulty, 0
+IniRead, g_nDelayUsingShield, LineRangers.ini, EVENT_STAGE, DelayUsingShield, 7000
 
 
 ClickClientPoint( 150, 355, 500 ) ; "BATTLE" click
@@ -88,9 +89,18 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 		ClickClientPoint( 170, 55, 100 ) ; Use heal
 	if ( !IsSimilarColorSet(g_arrColorSpeedUp) )
 		ClickClientPoint( 220, 41, 100 ) ; Use speed up
-	if ( !IsSimilarColorSet(g_arrColorShield) )
+	if ( !hasShield and !IsSimilarColorSet(g_arrColorShield) )
+	{
+		hasShield := true
+		tickGetShield := A_TickCount
+	}
+	if ( hasShield and ( (A_TickCount - tickGetShield) > g_nDelayUsingShield) )
+	{
 		ClickClientPoint( 270, 65, 100 ) ; Use shield
+		hasShield := false
+	}
 }
+AppendLogWindow( "[EVENT_STAGE] finish battle." )
 
 Sleep 1000
 ClickClientPoint( 400, 415, 500 )
