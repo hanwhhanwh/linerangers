@@ -49,6 +49,7 @@ if ( !IsSimilarColorSet( g_arrColorSetEventStage ) )
 	ExitApp, 0
 }
 
+g_nBattleCount := 0
 
 EVENT_STAGE_LOOP:
 
@@ -76,6 +77,8 @@ if ( WaitColorSet( g_arrColorEventTeam, 30 ) = 0 )
 ClickClientPoint( 400, 415, 500 ) ; Click "START"
 
 ;;; In battle : Produce Rangers / Use Items
+g_nBattleCount := g_nBattleCount + 1
+AppendLogWindow( "[EVENT_STAGE] in battle..." )
 While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 {
 	ProduceRanger( 225 )
@@ -100,7 +103,7 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 		hasShield := false
 	}
 }
-AppendLogWindow( "[EVENT_STAGE] finish battle." )
+AppendLogWindow( "[EVENT_STAGE] finish battle. : " + g_nBattleCount )
 
 Sleep 1000
 ClickClientPoint( 400, 415, 500 )
