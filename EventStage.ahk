@@ -81,6 +81,12 @@ g_nBattleCount := g_nBattleCount + 1
 AppendLogWindow( "[EVENT_STAGE] in battle. Difficulty = " + g_nDifficulty )
 While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 {
+	if ( hasShield and ( (A_TickCount - tickGetShield) > g_nDelayUsingShield) )
+	{
+		ClickClientPoint( 270, 65, 100 ) ; Use shield
+		hasShield := false
+	}
+
 	ProduceRanger( 225 )
 	ProduceRanger( 310 )
 	ProduceRanger( 390 )
@@ -96,11 +102,6 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 	{
 		hasShield := true
 		tickGetShield := A_TickCount
-	}
-	if ( hasShield and ( (A_TickCount - tickGetShield) > g_nDelayUsingShield) )
-	{
-		ClickClientPoint( 270, 65, 100 ) ; Use shield
-		hasShield := false
 	}
 }
 AppendLogWindow( "[EVENT_STAGE] finish battle. : " + g_nBattleCount )
