@@ -112,8 +112,8 @@ g_ptSbLaboratory	:= [757, 337]
 if ( IsSimilarColorSet( g_arrColorSetIsLeonardLab ) == 0 )
 { ; Leonard's Lab 으로 이동
 
-	ClickClientPoint( g_ptShortMoveButton[1], g_ptShortMoveButton[2], 700 )
-	ClickClientPoint( g_ptSbLaboratory[1], g_ptSbLaboratory[2], 700 )
+	ClickClientPoint( g_ptShortMoveButton[1], g_ptShortMoveButton[2], 1000 )
+	ClickClientPoint( g_ptSbLaboratory[1], g_ptSbLaboratory[2], 1000 )
 
 	AppendLogWindow( "    Wait move Leonard's Lab : " . A_TickCount)
 	if ( WaitColorSet( g_arrColorSetIsLeonardLab, 30 ) = 0 )
@@ -143,7 +143,7 @@ IniRead, nMatirialScrollCount, LineRangers.ini, %strIniSctionName%, nMatirialScr
 IniRead, nMaririalClickY, LineRangers.ini, %strIniSctionName%, nMaririalClickY, 257
 IniRead, nSleepTime, LineRangers.ini, %strIniSctionName%, SleepTime, 600000
 
-
+/*
 if ( IsSameColorSet( g_arrColorSetIsLeonardLab ) )
 {
 	AppendLogWindow( "    Move Train Center : " . A_TickCount)
@@ -206,7 +206,7 @@ Loop, 4
 		ClickClientPoint( 400, 50, 800 )
 		Sleep 1500
 	}
-/*
+
 	arrColorSetNeedTrain := [ [133, 240, 0xE4D100], [160, 239, 0xEDD900], [140, 250, 0xE8D400] ]
 	; 검사할 Room에 맞게 훈련 필요 여부 검사할 색 조합의 좌표 이동중
 	{
@@ -279,7 +279,7 @@ Loop, 4
 			ExitApp, 0
 		}
 	}
-*/
+
 	nX := nX + g_nRoomGap ; 다음 Room 클릭 위치
 }
 
@@ -291,6 +291,7 @@ if ( WaitColorSet( g_arrColorSetIsLeonardLab, 30 ) = 0 )
 	MsgBox, Move Lab 이동중 문제 발생
 	ExitApp, 0
 }
+*/
 
 Sleep 1000
 
