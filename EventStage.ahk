@@ -83,7 +83,7 @@ While ( !IsSimilarColorSet( g_arrColorEventStageResult ) )
 {
 	if ( hasShield and ( (A_TickCount - tickGetShield) > g_nDelayUsingShield) )
 	{
-		ClickClientPoint( 270, 65, 100 ) ; Use shield
+		ClickClientPoint( 270, 65, 0 ) ; Use shield
 		hasShield := false
 	}
 

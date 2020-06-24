@@ -19,6 +19,7 @@ if ( !InitializeLineRangers() )
 	ExitApp, 0
 }
 
+g_nCountOfClearStage := 3
 g_nStartingMinute := Mod(A_Min, 10)
 g_nStartCombat := 0
 g_nDelayForNextCombat := 0 ; 다음 전투를 시작하기 전에 대기할 시간(단위 : 분)
@@ -26,6 +27,8 @@ g_nUseTornado := 0 ; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornad
 g_nUseIceShot := 0 ; 전투에 진입한 후, 지정된 시간 후(단위:초)에 아이스샷(Ice Shot)을 사용함. 0이면 사용안함
 g_nUseUseMeteor := 0 ; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor)를 사용함. 0이면 사용안함
 
+
+IniRead, g_nCountOfClearStage, LineRangers.ini, SPECIAL_STAGE_ND, CountOfClearStage, 0
 
 
 CheckAppPlayer( g_nInstance )
@@ -49,8 +52,10 @@ CloseTeamviewer()
 
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
-;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
-g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4] ]
+if (g_nCountOfClearStage > 3)
+	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
+else
+	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4] ]
 
 
 nSpecialStage := 1
