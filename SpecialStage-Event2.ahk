@@ -37,20 +37,11 @@ AppendLogWIndow( "Start SpecialStage EVENT2 Script : Client Hwnd = " . g_hwndApp
 CloseTeamviewer()
 
 
-;AppendLogWIndow(  "Special Stage의 Event2 진행중인 곳이 보이도록 화면 맨 왼쪽으로 이동하기" )
-;Sleep 500
-;
-;; Special Stage의 EVENT2 레벨이 보이도록 화면 맨 오른쪽으로 이동하기
-;DragMouse( 5, 335, 795, 335 )
-;Sleep 500
-;DragMouse( 5, 335, 795, 335 )
-;Sleep 500
-
-
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
-g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3] ]
+;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4] ]
+g_arrStages := [ [358, 269, 6], [358, 183, 5] ]
 
 
 nSpecialStage := 1
