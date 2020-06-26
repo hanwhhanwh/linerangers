@@ -33,19 +33,7 @@ CreateLogWindow()
 
 AppendLogWIndow( "Start SpecialStage EVENT Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
 
-
 CloseTeamviewer()
-
-
-;AppendLogWIndow(  "Special Stage의 Event 진행중인 곳이 보이도록 화면 맨 왼쪽으로 이동하기" )
-;Sleep 500
-;
-;; Special Stage의 EVENT 레벨이 보이도록 화면 맨 오른쪽으로 이동하기
-;DragMouse( 5, 335, 795, 335 )
-;Sleep 500
-;DragMouse( 5, 335, 795, 335 )
-;Sleep 500
-
 
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
@@ -77,8 +65,7 @@ AppendLogWIndow( "#" . nStage . ") Special Stage(EVENT) 로의 진입......" )
 
 
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
-;strStageName := "SPECIAL_STAGE_EVENT" . nStage
-strStageName := "SPECIAL_STAGE_EVENT"
+strStageName := "SPECIAL_STAGE_EVENT" . nStage
 AutoCombatSpecialStage( strStageName )
 
 
