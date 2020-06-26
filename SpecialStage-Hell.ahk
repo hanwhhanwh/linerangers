@@ -32,30 +32,18 @@ IniRead, g_nCountOfClearStage, LineRangers.ini, SPECIAL_STAGE_ND, CountOfClearSt
 
 
 CheckAppPlayer( g_nInstance )
+
 CreateLogWindow()
-
 AppendLogWindow( "Start SpecialStage Hell Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
-
 
 CloseTeamviewer()
 
 
-;AppendLogWindow(  "Special Stage의 Event 진행중인 곳이 보이도록 화면 맨 왼쪽으로 이동하기" )
-;Sleep 500
-
-; Special Stage의 Hell 레벨이 보이도록 화면 맨 오른쪽으로 이동하기
-;DragMouse( 795, 335, 5, 335 )
-;Sleep 500
-;DragMouse( 795, 335, 5, 335 )
-;Sleep 500
-
-
-
-; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
-if (g_nCountOfClearStage > 3)
+; Wen, Sat, Sun : All stages, else 4 stages
+if (A_WDay in 1,4,7)
 	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
 else
-	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4] ]
+	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [452, 163, 2] ]
 
 
 nSpecialStage := 1
