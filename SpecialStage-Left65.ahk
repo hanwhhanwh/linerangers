@@ -1,9 +1,9 @@
 ;===============================================================================
-; @file SpecialStage-Event.ahk
+; @file SpecialStage-Left65.ahk
 ; @author hbesthee@naver.com
-; @date 2017-03-03
+; @date 2020-06-26
 ;
-; @description SPECIAL STAGE Event2를 위한 통합 스크립트
+; @description SPECIAL STAGE Left 6, 5 stages를 위한 통합 스크립트
 ;
 ;===============================================================================
 
@@ -31,7 +31,7 @@ g_nUseUseMeteor := 0 ; 전투에 진입한 후, 지정된 시간 후(단위:초)에 메테오(Meteor
 CheckAppPlayer( g_nInstance )
 CreateLogWindow()
 
-AppendLogWIndow( "Start SpecialStage EVENT2 Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
+AppendLogWIndow( "Start SpecialStage Left65 Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
 
 
 CloseTeamviewer()
@@ -40,7 +40,6 @@ CloseTeamviewer()
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
-;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4] ]
 g_arrStages := [ [358, 269, 6], [358, 183, 5] ]
 
 
@@ -65,11 +64,11 @@ nStage := g_arrStages[nSpecialStage][3]
 
 
 ClickClientPoint( nX, nY, 5000 )
-AppendLogWIndow( "#" . nStage . ") Special Stage(EVENT2) 로의 진입......" )
+AppendLogWIndow( "#" . nStage . ") Special Stage(Left65) 로의 진입......" )
 
 
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
-strStageName := "SPECIAL_STAGE_EVENT" . nStage
+strStageName := "SPECIAL_STAGE_LEFT" . nStage
 AutoCombatSpecialStage( strStageName )
 
 
