@@ -33,7 +33,7 @@ SPECIAL_STAGE:
 
 
 ; Line Rangers GEAR 화면인지 확인할 때의 컬러 조합
-g_arrColorSetIsSpecialStage				:= [ [291, 405, 0xEB1B00], [394, 427, 0xCF0F00], [504, 448, 0xB41000] ]
+g_arrColorSetIsSpecialStage				:= [ [291, 405, 0xF52004], [394, 427, 0xD3170D], [504, 448, 0xA60F00] ]
 
 bTimeout := WaitColorSet(g_arrColorSetIsSpecialStage)
 ;bTimeout := WaitSpecialStage()
