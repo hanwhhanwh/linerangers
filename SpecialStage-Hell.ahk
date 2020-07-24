@@ -71,7 +71,7 @@ AppendLogWindow( "#" . nStage . ") Special Stage(HELL) 로의 진입......" )
 
 
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
-strStageName := "SPECIAL_STAGE_ND"
+strStageName := "SPECIAL_STAGE_HELL" . nStage
 AutoCombatSpecialStage( strStageName )
 
 
