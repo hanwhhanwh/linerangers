@@ -51,7 +51,7 @@ CloseTeamviewer()
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [190, 120, 3], [125, 180, 2], [132, 267, 1] ]
 ;g_arrStages := [ [358, 269, 6], [287, 120, 4], [129, 165, 2] ]
-g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [125, 180, 2] ]
+g_arrStages := [ [358, 269, 6], [287, 120, 4] ]
 
 
 nSpecialStage := 1
@@ -79,7 +79,7 @@ AppendLogWIndow( "#" . nStage . ") Special Stage(Hard) 로의 진입......" )
 
 
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
-strStageName := "SPECIAL_STAGE_HARD"
+strStageName := "SPECIAL_STAGE_HARD" . nStage
 AutoCombatSpecialStage( strStageName )
 
 
