@@ -25,8 +25,8 @@ if ( !InitializeLineRangers() )
 
 ; Event Stage 화면인지 확인할 때의 색조합
 g_arrColorSetEventStage		:= [ [150, 355, 0xD3170D], [530, 230, 0xEB8A00], [430, 350, 0xD22B91] ]
-; Line Rangers HOME 화면인지 확인할 때의 색조합
-g_arrColorEventTeam			:= [ [400, 415, 0x05C232], [450, 306, 0x483016], [456, 155, 0xAA7744] ]
+; Event Stage 팀 설정 화면인지 확인할 때의 색조합
+g_arrColorEventTeam			:= [ [400, 415, 0x05C232], [457, 155, 0xAA7744], [250, 40, 0xFFEE44] ]
 ; 전투중인지 확인하는 색조합
 g_arrColorBattle			:= [ [237, 268, 0x17110B], [238, 382, 0x3A1B00], [239, 381, 0x50320F] ]
 ; 전투가 종료되었는지 확인하는 색조합
