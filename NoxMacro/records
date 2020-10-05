@@ -1,0 +1,128 @@
+{
+    "1753237e4bd44a54935cc60b5f009268": {
+        "combination": "false",
+        "name": "6성 레벨업(5)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "15",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "4",
+        "time": "1593266280"
+    },
+    "3c454ad2457d4e3787df17a6d74ee5a4": {
+        "combination": "false",
+        "name": "나의 기록2",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "1",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "1",
+        "time": "1600085542"
+    },
+    "40e3562e37e8473485406f70a161e03e": {
+        "combination": "false",
+        "name": "GuildRaid",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "5",
+        "time": "1592537866"
+    },
+    "4421b15d8be54e33be2fec1b36b8f4f4": {
+        "combination": "false",
+        "name": "Friends",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "10",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "6",
+        "time": "1591745411"
+    },
+    "5650b57b490a47699e8ecd57b0048e12": {
+        "combination": "false",
+        "name": "지능(2성)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "1",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "0",
+        "time": "1600428139"
+    },
+    "65830e07369d440bb403d4c1beb4c506": {
+        "combination": "false",
+        "name": "지능(3성)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "1",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "2",
+        "time": "1600059098"
+    },
+    "7ffa877bc6c64264816cb5071a0eecb1": {
+        "combination": "false",
+        "name": "6성 레벨업(9)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "1",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "8",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "3",
+        "time": "1599025302"
+    }
+}
