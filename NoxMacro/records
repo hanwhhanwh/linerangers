@@ -14,7 +14,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "4",
+        "priority": "5",
         "time": "1593266280"
     },
     "3c454ad2457d4e3787df17a6d74ee5a4": {
@@ -32,7 +32,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "1",
+        "priority": "2",
         "time": "1600085542"
     },
     "40e3562e37e8473485406f70a161e03e": {
@@ -50,7 +50,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "5",
+        "priority": "6",
         "time": "1592537866"
     },
     "4421b15d8be54e33be2fec1b36b8f4f4": {
@@ -68,7 +68,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "6",
+        "priority": "7",
         "time": "1591745411"
     },
     "5650b57b490a47699e8ecd57b0048e12": {
@@ -86,7 +86,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "0",
+        "priority": "1",
         "time": "1600428139"
     },
     "65830e07369d440bb403d4c1beb4c506": {
@@ -104,7 +104,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "2",
+        "priority": "3",
         "time": "1600059098"
     },
     "7ffa877bc6c64264816cb5071a0eecb1": {
@@ -122,7 +122,25 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "3",
+        "priority": "4",
         "time": "1599025302"
+    },
+    "edda783e2e794605a65aedbce4dedb45": {
+        "combination": "false",
+        "name": "힘(3성)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "1",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "0",
+        "time": "1601942465"
     }
 }
