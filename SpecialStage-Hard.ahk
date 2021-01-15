@@ -50,8 +50,8 @@ CloseTeamviewer()
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [190, 120, 3], [125, 180, 2], [132, 267, 1] ]
-;g_arrStages := [ [358, 269, 6], [287, 120, 4], [129, 165, 2] ]
-g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [129, 165, 2] ]
+g_arrStages := [ [358, 269, 6], [129, 165, 2] ]
+;g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [129, 165, 2] ]
 
 
 nSpecialStage := 1
@@ -65,7 +65,7 @@ SPECIAL_STAGES:
 if (nSpecialStage > g_arrStages.Length() )
 {
 	AppendLogWindow( g_arrStages.Length() . " stages complete!..." )
-	Run, RepeatLab.ahk
+	;Run, RepeatLab.ahk
 	ExitApp, 0
 }
 
