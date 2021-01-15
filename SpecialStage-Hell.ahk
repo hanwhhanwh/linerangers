@@ -46,8 +46,8 @@ else
 	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [452, 163, 2] ]
 
 
-;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [452, 163, 2] ]
-g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
+;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
+g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2] ]
 nSpecialStage := 1
 
 
@@ -59,7 +59,7 @@ SPECIAL_STAGES:
 if (nSpecialStage > g_arrStages.Length() )
 {
 	AppendLogWindow( g_arrStages.Length() . " stages complete!..." )
-	Run, RepeatLab.ahk
+	;Run, RepeatLab.ahk
 	ExitApp, 0
 }
 
