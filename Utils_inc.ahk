@@ -100,11 +100,11 @@ AppendLogWindow(strMsg)
 ; @return LEVEL UP 창을 찾으면 1, 그렇지 않으면 0을 반환한다.
 CheckOkButton( nPosX, nPosY )
 {
-	PixelGetColor, clrOutputColor1, nPosX + 19, nPosY + 18, RGB ; 0x00DD44
-	PixelGetColor, clrOutputColor2, nPosX + 45, nPosY + 35, RGB ; 0x00BB33
+	PixelGetColor, clrOutputColor1, nPosX + 19, nPosY + 18, RGB ; 0x07DA46
+	PixelGetColor, clrOutputColor2, nPosX + 45, nPosY + 35, RGB ; 0x05C232
 	PixelGetColor, clrOutputColor3, nPosX + 103, nPosY + 35, RGB ; 0xFFFFFF
 
-	If ( clrOutputColor1 = 0x00DD44 ) and ( clrOutputColor2 = 0x00BB33 ) and ( clrOutputColor3 = 0xFFFFFF )
+	If IsSimilarColor( clrOutputColor1, 0x07DA46 ) and IsSimilarColor( clrOutputColor2, 0x00BB33 ) and IsSimilarColor( clrOutputColor3, 0xFFFFFF )
 	{
 		return 1
 	}
@@ -527,7 +527,7 @@ IsSameColorSet( ByRef arrColorSet )
 @param	nTolerance +- 허용오차 값
 @return	If similar color is true, otherwise false
 */
-IsSimilarColor(nRgbColor1, nRgbColor2, nTolerance = 5)
+IsSimilarColor(nRgbColor1, nRgbColor2, nTolerance = 10)
 {
 	nR1 :=  nRgbColor1 >> 16
 	nG1 := (nRgbColor1 >> 8) & 0xFF
