@@ -100,11 +100,14 @@ AppendLogWindow(strMsg)
 ; @return LEVEL UP 창을 찾으면 1, 그렇지 않으면 0을 반환한다.
 CheckOkButton( nPosX, nPosY )
 {
-	PixelGetColor, clrOutputColor1, nPosX + 19, nPosY + 18, RGB ; 0x07DA46
-	PixelGetColor, clrOutputColor2, nPosX + 45, nPosY + 35, RGB ; 0x05C232
-	PixelGetColor, clrOutputColor3, nPosX + 103, nPosY + 35, RGB ; 0xFFFFFF
+	Global g_nClientX, g_nClientY
 
-	If IsSimilarColor( clrOutputColor1, 0x07DA46 ) and IsSimilarColor( clrOutputColor2, 0x00BB33 ) and IsSimilarColor( clrOutputColor3, 0xFFFFFF )
+	CoordMode, Pixel, Screen
+	PixelGetColor, clrOutputColor1, g_nClientX + nPosX + 13, g_nClientY + nPosY + 13, RGB ; 0x07DA46
+	PixelGetColor, clrOutputColor2, g_nClientX + nPosX + 60, g_nClientY + nPosY + 40, RGB ; 0x009B20
+	PixelGetColor, clrOutputColor3, g_nClientX + nPosX + 65, g_nClientY + nPosY + 22, RGB ; 0xFFFFFF
+
+	If IsSimilarColor( clrOutputColor1, 0x07DA46 ) and IsSimilarColor( clrOutputColor2, 0x009B20 ) and IsSimilarColor( clrOutputColor3, 0xFFFFFF )
 	{
 		return 1
 	}
