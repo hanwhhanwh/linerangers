@@ -57,7 +57,7 @@ ClickClientPoint( 245, 325, 5000 )
 AppendLogWIndow( "click : Hard 5 stage")
 ClickClientPoint( 30, 40, 5000 )
 AppendLogWIndow( "click : Back")
-Sleep(5000)
+Sleep 3500
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 g_arr5Stages	:= [ [665, 350, 1], [567, 300, 2], [457, 283, 3], [349, 273, 4] ]
@@ -65,36 +65,41 @@ g_arrStages		:= [ [300, 206, 2], [300, 206, 3], [300, 206, 4] ]
 g_ptEnter		:= [400, 420]
 nClearStage		:= 1
 
+isNotEntered := True
 ; 1 Hard-stage부터 입장이 가능한지 확인하여 입장되면 다음 진행
-While ( nClearStage <= g_arrStages.Length() )
+While ( nClearStage <= g_arrStages.Length() and isNotEntered )
 {
-	nX := g_arrStages[nClearStage][1]
-	nY := g_arrStages[nClearStage][2]
-	nStage := g_arrStages[nClearStage][3]
+	nX := g_arr5Stages[nClearStage][1]
+	nY := g_arr5Stages[nClearStage][2]
+	nStage := g_arr5Stages[nClearStage][3]
 
-	AppendLogWIndow( "click : Hard " . nStage . " stage")
-	ClickClientPoint( nX, nY, 1000 )
+	AppendLogWIndow( "  click : Hard " . nStage . " stage")
+	ClickClientPoint( nX, nY, 1500 )
+	AppendLogWIndow( "  Hard " . nStage . " stage 진입중...")
+	Sleep 1000
 	; 이미 clear된 것인지 확인
-	if ( CheckOkButton(339, 296) )
+	if ( CheckOkButton(339, 295) )
 	{
 		AppendLogWIndow( "  cleard : Hard " . nStage . " stage")
 		ClickClientPoint( 400, 320, 1000 )
 		nClearStage := nClearStage + 1
 		continue
 	}
+	; isNotEntered := False
 	break
 }
 
 
 MAIN_HARD_STAGES:
 
-if (nClearStage > g_arrStages.Length() )
+if (nClearStage > g_arr5Stages.Length() )
 {
-	AppendLogWindow( g_arrStages.Length() . " HARD stages complete!..." )
+	AppendLogWindow( g_arr5Stages.Length() . " HARD stages complete!..." )
 	;Run, RepeatLab.ahk
 	ExitApp, 0
 }
 
+Sleep 3500
 
 
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
