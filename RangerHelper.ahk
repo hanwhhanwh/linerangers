@@ -45,7 +45,7 @@ nResult := WaitStartingCombat(300)
 If ( nResult = 0 )
 {
 	AppendLogWindow( "  전투 진입 실패..." )
-	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)의 전투로 진입하지 못하였습니다...
+	MsgBox, AppPlayer%g_nInstance% 전투로 진입하지 않았습니다...
 	ExitApp, 0
 }
 
