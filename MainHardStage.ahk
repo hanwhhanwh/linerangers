@@ -124,10 +124,12 @@ ProduceRanger(235)
 ProduceRanger(485)
 ProduceRanger(570)
 
+Sleep 700
+
 If (g_isUseUnbeatable = 1)
 	SelectUnbeatable( g_isUseUnbeatable, g_isUseFriend )
 
-nNextTeamChangeTick := A_TickCount + 5000
+nNextTeamChangeTick := A_TickCount + 5500
 ; 팀 변경하며 전투가 종료될 때까지 대기
 While ( IsFinishCombat() = 0 )
 {
@@ -149,9 +151,9 @@ While ( IsFinishCombat() = 0 )
 
 	if ( g_isChangingTeam = 1 )
 	{
-		if (nNextTeamChangeTick > A_TickCount)
+		if (nNextTeamChangeTick < A_TickCount)
 		{
-			nNextTeamChangeTick := A_TickCount + 10000
+			nNextTeamChangeTick := A_TickCount + 5500
 			ClickClientPoint( 42, 50 )
 		}
 	}
