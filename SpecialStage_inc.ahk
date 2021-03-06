@@ -24,6 +24,7 @@ IniRead, g_isUseUnbeatable, LineRangers.ini,% strStageName, UseUnbeatable, 0
 IniRead, g_nUseTornado, LineRangers.ini,% strStageName, UseTornado, 0
 IniRead, g_nUseIceShot, LineRangers.ini,% strStageName, UseIceShot, 0
 IniRead, g_nUseUseMeteor, LineRangers.ini,% strStageName, UseUseMeteor, 0
+IniRead, g_isChangingTeam, LineRangers.ini,% strStageName, IsChangingTeam, 1
 
 g_ptEnter		:= [400, 420]
 
