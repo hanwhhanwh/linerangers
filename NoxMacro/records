@@ -1,58 +1,4 @@
 {
-    "1a7a3e14c30247e98d62390648e0679b": {
-        "combination": "false",
-        "name": "성장재료 클릭",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "1",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "1",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "2",
-        "time": "1610771523"
-    },
-    "3c454ad2457d4e3787df17a6d74ee5a4": {
-        "combination": "false",
-        "name": "나의 기록2",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "1",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "1",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "5",
-        "time": "1600085542"
-    },
-    "40e3562e37e8473485406f70a161e03e": {
-        "combination": "false",
-        "name": "GuildRaid",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "0",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "1",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "8",
-        "time": "1592537866"
-    },
     "4421b15d8be54e33be2fec1b36b8f4f4": {
         "combination": "false",
         "name": "Friends",
@@ -68,7 +14,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "9",
+        "priority": "6",
         "time": "1591745411"
     },
     "5650b57b490a47699e8ecd57b0048e12": {
@@ -86,7 +32,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "4",
+        "priority": "5",
         "time": "1600428139"
     },
     "65830e07369d440bb403d4c1beb4c506": {
@@ -104,26 +50,26 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "6",
+        "priority": "4",
         "time": "1600059098"
     },
-    "7ffa877bc6c64264816cb5071a0eecb1": {
+    "e64211fc551841e9909f764169dfb0b2": {
         "combination": "false",
-        "name": "6성 레벨업(9)",
+        "name": "힘(2성)",
         "needShow": "true",
         "new": "false",
         "playSet": {
             "accelerator": "1",
-            "interval": "1",
-            "mode": "0",
+            "interval": "0",
+            "mode": "1",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "8",
+            "repeatTimes": "1",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "7",
-        "time": "1599025302"
+        "priority": "0",
+        "time": "1617625794"
     },
     "edda783e2e794605a65aedbce4dedb45": {
         "combination": "false",
@@ -158,7 +104,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "1",
+        "priority": "2",
         "time": "1611917869"
     },
     "faec716993c047f8a5f037263e9af01f": {
@@ -172,11 +118,11 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "7",
+            "repeatTimes": "10",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "0",
+        "priority": "1",
         "time": "1612267021"
     }
 }
