@@ -39,24 +39,40 @@ CloseTeamviewer()
 
 
 ; Main-Hard Stage의 5 stage가 중앙에 보이도록 이동하기
-; ClickClientPoint( 222, 430, 1500 )
-; AppendLogWIndow( "click : Main-stage Hard")
-; ClickClientPoint( 125, 357, 5000 )
-; AppendLogWIndow( "click : Hard 6 stage")
-; ClickClientPoint( 30, 40, 5000 )
-; AppendLogWIndow( "click : Back")
-; ClickClientPoint( 245, 325, 5000 )
-; AppendLogWIndow( "click : Hard 5 stage")
-; ClickClientPoint( 30, 40, 5000 )
-; AppendLogWIndow( "click : Back")
-; Sleep 3500
+ClickClientPoint( 222, 430, 1500 )
+AppendLogWIndow( "click : Main-stage Hard")
+ClickClientPoint( 125, 357, 5000 )
+AppendLogWIndow( "click : Hard 6 stage")
+ClickClientPoint( 30, 40, 5000 )
+AppendLogWIndow( "click : Back")
+;ClickClientPoint( 349, 363, 5000 )
+;AppendLogWIndow( "click : Hard 4 stage")
+
+Sleep 3500
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
+g_arr4Stages	:= [ [349, 363, 4], [457, 251, 3], [507, 256, 2], [495, 286, 1]  ]
 g_arr5Stages	:= [ [665, 350, 1], [567, 300, 2], [457, 283, 3], [349, 273, 4] ]
 g_arrStages		:= [ [300, 206, 2], [300, 206, 3], [300, 206, 4] ]
 g_ptEnter		:= [400, 420]
 nClearStage		:= 1
 
+
+While ( nClearStage <= g_arr4Stages.Length() )
+{
+	nX := g_arr4Stages[nClearStage][1]
+	nY := g_arr4Stages[nClearStage][2]
+	nStage := g_arr4Stages[nClearStage][3]
+
+	ClickClientPoint( nX, nY, 5000 )
+	AppendLogWIndow( "click : Hard " . nStage . " stage")
+	ClickClientPoint( 30, 40, 5000 )
+	AppendLogWIndow( "click : Back")
+
+	nClearStage		:= nClearStage + 1
+}
+
+ExitApp, 0
 ; isNotEntered := True
 ; ; 1 Hard-stage부터 입장이 가능한지 확인하여 입장되면 다음 진행
 ; While ( nClearStage <= g_arrStages.Length() and isNotEntered )
