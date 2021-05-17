@@ -58,21 +58,23 @@ g_ptEnter		:= [400, 420]
 nClearStage		:= 1
 
 
-While ( nClearStage <= g_arr4Stages.Length() )
-{
+MAIN_HARD_STAGES:
+
+;While ( nClearStage <= g_arr4Stages.Length() )
+;{
 	nX := g_arr4Stages[nClearStage][1]
 	nY := g_arr4Stages[nClearStage][2]
 	nStage := g_arr4Stages[nClearStage][3]
 
 	ClickClientPoint( nX, nY, 5000 )
 	AppendLogWIndow( "click : Hard " . nStage . " stage")
-	ClickClientPoint( 30, 40, 5000 )
-	AppendLogWIndow( "click : Back")
+;	ClickClientPoint( 30, 40, 5000 )
+;	AppendLogWIndow( "click : Back")
 
-	nClearStage		:= nClearStage + 1
-}
+;	nClearStage		:= nClearStage + 1
+;}
 
-ExitApp, 0
+;ExitApp, 0
 ; isNotEntered := True
 ; ; 1 Hard-stage부터 입장이 가능한지 확인하여 입장되면 다음 진행
 ; While ( nClearStage <= g_arrStages.Length() and isNotEntered )
@@ -97,7 +99,8 @@ ExitApp, 0
 ; 	break
 ; }
 
-MAIN_HARD_STAGES:
+Sleep 2000
+
 
 
 
@@ -188,7 +191,9 @@ If ( bTimeout = 0 )
 AppendLogWIndow( "  보상 수령하기" )
 AcceptClearBonus( g_arrColorSetIsSpecialStage ) ; 보상 수령
 
-Sleep 1000
+Sleep 2000
+
+AcceptClearBonus( g_arrColorSetIsSpecialStage ) ; 보상 수령
 
 ; AppendLogWIndow( "  다음 Stage 진입 전..." )
 ; nX := g_arrStages[nClearStage][1]
@@ -199,7 +204,9 @@ Sleep 1000
 
 ; ClickClientPoint( nX, nY, 1000 )
 ; AppendLogWIndow( "#" . nStage . ") HARD stage 로의 진입......" )
-ExitApp, 0
+;ExitApp, 0
+
+nClearStage		:= nClearStage + 1
 
 Goto, MAIN_HARD_STAGES
 
