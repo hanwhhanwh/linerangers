@@ -45,8 +45,6 @@ ClickClientPoint( 125, 357, 5000 )
 AppendLogWIndow( "click : Hard 6 stage")
 ClickClientPoint( 30, 40, 5000 )
 AppendLogWIndow( "click : Back")
-;ClickClientPoint( 349, 363, 5000 )
-;AppendLogWIndow( "click : Hard 4 stage")
 
 Sleep 3500
 
@@ -57,56 +55,24 @@ g_arrStages		:= [ [300, 206, 2], [300, 206, 3], [300, 206, 4] ]
 g_ptEnter		:= [400, 420]
 nClearStage		:= 1
 
+g_arrWaitColor	:= [[121, 427, 0x912ACE], [80, 412, 0x0B0D17], [764, 434, 0xE0D79D]]
+
 
 MAIN_HARD_STAGES:
 
-;While ( nClearStage <= g_arr4Stages.Length() )
-;{
-	nX := g_arr4Stages[nClearStage][1]
-	nY := g_arr4Stages[nClearStage][2]
-	nStage := g_arr4Stages[nClearStage][3]
 
-	ClickClientPoint( nX, nY, 5000 )
-	AppendLogWIndow( "click : Hard " . nStage . " stage")
-;	ClickClientPoint( 30, 40, 5000 )
-;	AppendLogWIndow( "click : Back")
+nX := g_arr4Stages[nClearStage][1]
+nY := g_arr4Stages[nClearStage][2]
+nStage := g_arr4Stages[nClearStage][3]
 
-;	nClearStage		:= nClearStage + 1
-;}
-
-;ExitApp, 0
-; isNotEntered := True
-; ; 1 Hard-stage부터 입장이 가능한지 확인하여 입장되면 다음 진행
-; While ( nClearStage <= g_arrStages.Length() and isNotEntered )
-; {
-; 	nX := g_arr5Stages[nClearStage][1]
-; 	nY := g_arr5Stages[nClearStage][2]
-; 	nStage := g_arr5Stages[nClearStage][3]
-
-; 	AppendLogWIndow( "  click : Hard " . nStage . " stage")
-; 	ClickClientPoint( nX, nY, 1500 )
-; 	AppendLogWIndow( "  Hard " . nStage . " stage 진입중...")
-; 	Sleep 1000
-; 	; 이미 clear된 것인지 확인
-; 	if ( CheckOkButton(339, 295) )
-; 	{
-; 		AppendLogWIndow( "  cleard : Hard " . nStage . " stage")
-; 		ClickClientPoint( 400, 320, 1000 )
-; 		nClearStage := nClearStage + 1
-; 		continue
-; 	}
-; 	; isNotEntered := False
-; 	break
-; }
+ClickClientPoint( nX, nY, 5000 )
+AppendLogWIndow( "click : Hard " . nStage . " stage")
 
 Sleep 2000
 
 
-
-
 ; Stage에 맞는 환경설정 정보를 다시 읽어옴
 strStageName := "MAIN_HARD_STAGE" . nStage
-;AutoCombatSpecialStage( strStageName )
 
 
 AppendLogWIndow( "  팀 목록 호출 : " )
@@ -189,22 +155,10 @@ If ( bTimeout = 0 )
 
 
 AppendLogWIndow( "  보상 수령하기" )
-AcceptClearBonus( g_arrColorSetIsSpecialStage ) ; 보상 수령
+AcceptClearBonus( g_arrWaitColor ) ; 보상 수령
 
 Sleep 2000
 
-AcceptClearBonus( g_arrColorSetIsSpecialStage ) ; 보상 수령
-
-; AppendLogWIndow( "  다음 Stage 진입 전..." )
-; nX := g_arrStages[nClearStage][1]
-; nY := g_arrStages[nClearStage][2]
-; nStage := g_arrStages[nClearStage][3]
-
-; nClearStage := nClearStage + 1
-
-; ClickClientPoint( nX, nY, 1000 )
-; AppendLogWIndow( "#" . nStage . ") HARD stage 로의 진입......" )
-;ExitApp, 0
 
 nClearStage		:= nClearStage + 1
 
