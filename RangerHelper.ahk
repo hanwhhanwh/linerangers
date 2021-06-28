@@ -55,10 +55,12 @@ AppendLogWIndow( "  전투중..." )
 ProduceRanger(400)
 ProduceRanger(320)
 ProduceRanger(235)
+sleep 100
 ProduceRanger(485)
+sleep 100
 ProduceRanger(570)
 
-Sleep 2500 ; 자동 전투에서 무적 사용전 잠시 대기하기
+;Sleep 2500 ; 자동 전투에서 무적 사용전 잠시 대기하기
 
 If (g_isUseUnbeatable = 1)
 	SelectUnbeatable( g_isUseUnbeatable, g_isUseFriend )
