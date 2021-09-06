@@ -51,7 +51,7 @@ CloseTeamviewer()
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [190, 120, 3], [125, 180, 2], [132, 267, 1] ]
 g_arrStages := [ [358, 269, 6], [129, 165, 2] ]
-if (A_WDay = 4 or A_WDay = 7 or A_WDay = 1) ; Wen, Sat, Sun can earn double money.
+;if (A_WDay = 4 or A_WDay = 7 or A_WDay = 1) ; Wen, Sat, Sun can earn double money.
 {
 	AppendLogWindow( A_WDay . " : more money!!!" )
 	g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [129, 165, 2] ]

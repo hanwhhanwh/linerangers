@@ -40,7 +40,7 @@ CloseTeamviewer()
 
 
 g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [452, 163, 2], [438, 238, 1] ]
-if (A_WDay = 4 or A_WDay = 7 or A_WDay = 1) ; Wen, Sat, Sun can earn double money.
+;if (A_WDay = 4 or A_WDay = 7 or A_WDay = 1) ; Wen, Sat, Sun can earn double money.
 {
 	AppendLogWindow( A_WDay . " : more money!!!" )
 	g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
