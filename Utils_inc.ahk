@@ -134,12 +134,15 @@ CheckAppPlayer( nInstance, isActivate := false )
 		; WinMove, 0, 0
 		Sleep 500
 
-		hwndChild := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint",0, "uint",0, "str", "ScreenBoardClassWindow")
-		g_hwndAppPlayerClient := DllCall( "FindWindowEx", "uint", hwndChild, "uint",0, "uint",0, "str", "QWidgetClassWindow")
+		hwndChild := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint", 0, "str", "Qt5QWindowIcon", "str", "Nox")
+		hwndChild2 := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint", hwndChild, "str", "Qt5QWindowIcon", "str", "Nox")
+		hwndChild3 := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", 0, "str", "Qt5QWindowIcon", "str", "Nox")
+		g_hwndAppPlayerClient := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", hwndChild3, "str", "Qt5QWindowIcon", "str", "Nox")
 
 		VarSetCapacity( ptLeftTop, 8, 0 ), NumPut(ptLeftTop, 0, "Int"), NumPut(ptLeftTop, 0, "Int")
 		DllCall( "ClientToScreen", UInt, g_hwndAppPlayerClient, Ptr, &ptLeftTop )
 		g_nClientX := NumGet(ptLeftTop, 0, "Int"), g_nClientY := NumGet(ptLeftTop, 4, "Int") ; Client 영역의 L, T를 스크린 좌표 기준으로 구함
+		; g_nClientX := 1094, g_nClientY := 32
 
 		return 1
 	}
