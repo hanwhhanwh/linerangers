@@ -17,24 +17,6 @@
         "priority": "9",
         "time": "1591745411"
     },
-    "5650b57b490a47699e8ecd57b0048e12": {
-        "combination": "false",
-        "name": "지능(2성)",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "1",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "1",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "8",
-        "time": "1600428139"
-    },
     "65830e07369d440bb403d4c1beb4c506": {
         "combination": "false",
         "name": "지능(3성)",
@@ -50,7 +32,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "7",
+        "priority": "8",
         "time": "1600059098"
     },
     "d584ce56839445c097170fa1c6ea32fc": {
@@ -68,7 +50,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "1",
+        "priority": "2",
         "time": "1626821153"
     },
     "e64211fc551841e9909f764169dfb0b2": {
@@ -86,7 +68,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "3",
+        "priority": "4",
         "time": "1617625794"
     },
     "edda783e2e794605a65aedbce4dedb45": {
@@ -104,7 +86,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "6",
+        "priority": "7",
         "time": "1601942465"
     },
     "f3b711cdc5b342fb88ab8fbe9ee0aa7e": {
@@ -140,8 +122,26 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "5",
+        "priority": "6",
         "time": "1611917869"
+    },
+    "fa3a95d3c58f46c4aa7f064cecbf01c4": {
+        "combination": "false",
+        "name": "지능(2성)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "1",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "1",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "3",
+        "time": "1631673619"
     },
     "faec716993c047f8a5f037263e9af01f": {
         "combination": "false",
@@ -154,11 +154,11 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "10",
+            "repeatTimes": "15",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "4",
+        "priority": "5",
         "time": "1612267021"
     },
     "fb2cfecd347f46ea99ca3dcb0e3c8281": {
@@ -176,7 +176,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "2",
+        "priority": "1",
         "time": "1618314461"
     }
 }
