@@ -3,7 +3,7 @@
 ; @author hbesthee@naver.com
 ; @date 2021-01-16
 ;
-; @description Main Hard Stage µµ¿ì¹Ì ½ºÅ©¸³Æ®
+; @description Main Hard Stage ë„ìš°ë¯¸ ìŠ¤í¬ë¦½íŠ¸
 ;
 ;===============================================================================
 
@@ -14,19 +14,19 @@
 
 if ( !InitializeLineRangers() )
 {
-	MsgBox LineRangers ½ºÅ©¸³Æ® ÃÊ±âÈ­ ½ÇÆĞ!!!
+	MsgBox LineRangers ìŠ¤í¬ë¦½íŠ¸ ì´ˆê¸°í™” ì‹¤íŒ¨!!!
 	ExitApp, 0
 }
 
 g_nStartingMinute := Mod(A_Min, 10)
 g_nStartCombat := 0
-g_nAutoMode := 1 ; Auto ¹è¼Ó ¼³Á¤ : 0=¹è¼Ó »ç¿ë¾ÈÇÔ, 1=1¹è¼Ó, 2=2¹è¼Ó
-g_nDelayForNextCombat := 0 ; ´ÙÀ½ ÀüÅõ¸¦ ½ÃÀÛÇÏ±â Àü¿¡ ´ë±âÇÒ ½Ã°£(´ÜÀ§ : ºĞ)
-g_nUseTornado := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ Åä³×ÀÌµµ(Tornado)¸¦ »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
-g_nUseIceShot := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ ¾ÆÀÌ½º¼¦(Ice Shot)À» »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
-g_nUseUseMeteor := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ ¸ŞÅ×¿À(Meteor)¸¦ »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
-g_isUseUnbeatable := 1 ; ¹«Àû »ç¿ë
-g_isChangingTeam := 1 ; ÆÀ ±³Ã¼
+g_nAutoMode := 1 ; Auto ë°°ì† ì„¤ì • : 0=ë°°ì† ì‚¬ìš©ì•ˆí•¨, 1=1ë°°ì†, 2=2ë°°ì†
+g_nDelayForNextCombat := 0 ; ë‹¤ìŒ ì „íˆ¬ë¥¼ ì‹œì‘í•˜ê¸° ì „ì— ëŒ€ê¸°í•  ì‹œê°„(ë‹¨ìœ„ : ë¶„)
+g_nUseTornado := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— í† ë„¤ì´ë„(Tornado)ë¥¼ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
+g_nUseIceShot := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— ì•„ì´ìŠ¤ìƒ·(Ice Shot)ì„ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
+g_nUseUseMeteor := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— ë©”í…Œì˜¤(Meteor)ë¥¼ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
+g_isUseUnbeatable := 1 ; ë¬´ì  ì‚¬ìš©
+g_isChangingTeam := 1 ; íŒ€ êµì²´
 
 
 CheckAppPlayer( g_nInstance )
@@ -38,7 +38,7 @@ AppendLogWIndow( "Start [MainhardStage Hard] Script : Client Hwnd = " . g_hwndAp
 CloseTeamviewer()
 
 
-; Main-Hard StageÀÇ 5 stage°¡ Áß¾Ó¿¡ º¸ÀÌµµ·Ï ÀÌµ¿ÇÏ±â
+; Main-Hard Stageì˜ 5 stageê°€ ì¤‘ì•™ì— ë³´ì´ë„ë¡ ì´ë™í•˜ê¸°
 ClickClientPoint( 222, 430, 1500 )
 AppendLogWIndow( "click : Main-stage Hard")
 ClickClientPoint( 125, 357, 5000 )
@@ -48,7 +48,7 @@ AppendLogWIndow( "click : Back")
 
 Sleep 3500
 
-; ÀÔÀåÇÏ¿© Ã³¸®ÇÒ ´Ü°è¿¡ ´ëÇÑ Á¤º¸ ; [ [x, y, stage_num], ... ]
+; ì…ì¥í•˜ì—¬ ì²˜ë¦¬í•  ë‹¨ê³„ì— ëŒ€í•œ ì •ë³´ ; [ [x, y, stage_num], ... ]
 g_arr4Stages	:= [ [349, 363, 4], [457, 251, 3], [507, 256, 2], [495, 286, 1]  ]
 g_arr5Stages	:= [ [665, 350, 1], [567, 300, 2], [457, 283, 3], [349, 273, 4] ]
 g_arrStages		:= [ [300, 206, 2], [300, 206, 3], [300, 206, 4] ]
@@ -71,38 +71,38 @@ AppendLogWIndow( "click : Hard " . nStage . " stage")
 Sleep 2000
 
 
-; Stage¿¡ ¸Â´Â È¯°æ¼³Á¤ Á¤º¸¸¦ ´Ù½Ã ÀĞ¾î¿È
+; Stageì— ë§ëŠ” í™˜ê²½ì„¤ì • ì •ë³´ë¥¼ ë‹¤ì‹œ ì½ì–´ì˜´
 strStageName := "MAIN_HARD_STAGE" . nStage
 
 
-AppendLogWIndow( "  ÆÀ ¸ñ·Ï È£Ãâ : " )
+AppendLogWIndow( "  íŒ€ ëª©ë¡ í˜¸ì¶œ : " )
 ClickClientPoint( 400, 160, 1000 )
 
-AppendLogWIndow( "  ÆÀ 5 ¼±ÅÃ" )
+AppendLogWIndow( "  íŒ€ 5 ì„ íƒ" )
 ClickClientPoint( 400, 360, 1000 )
 
-AppendLogWindow( "  Ä£±¸ ¼±ÅÃ ÁøÀÔ..." )
+AppendLogWindow( "  ì¹œêµ¬ ì„ íƒ ì§„ì…..." )
 ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 1500 )
 
-AppendLogWindow( "  ÀüÅõ ÁøÀÔ ½Ãµµ..." )
+AppendLogWindow( "  ì „íˆ¬ ì§„ì… ì‹œë„..." )
 ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 1500 )
 
 nResult := WaitStartingCombat()
 If ( nResult = 0 )
 {
-	AppendLogWindow( "  ÀüÅõ ÁøÀÔ ½ÇÆĞ..." )
-	MsgBox, AppPlayer%g_nInstance% Main hard stage(%strStageName%)ÀÇ ÀüÅõ·Î ÁøÀÔÇÏÁö ¸øÇÏ¿´½À´Ï´Ù...
+	AppendLogWindow( "  ì „íˆ¬ ì§„ì… ì‹¤íŒ¨..." )
+	MsgBox, AppPlayer%g_nInstance% Main hard stage(%strStageName%)ì˜ ì „íˆ¬ë¡œ ì§„ì…í•˜ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤...
 	ExitApp, 0
 }
 else if ( bTimeout = -1 )
 {
-	AppendLogWindow( "  ÀüÅõ ÁøÀÔÀ» À§ÇÑ ±êÅĞ ºÎÁ·..." )
-	ExitApp, 0 ; ±êÅĞÀÌ ´õ ÀÌ»ó ¾øÀ½
+	AppendLogWindow( "  ì „íˆ¬ ì§„ì…ì„ ìœ„í•œ ê¹ƒí„¸ ë¶€ì¡±..." )
+	ExitApp, 0 ; ê¹ƒí„¸ì´ ë” ì´ìƒ ì—†ìŒ
 }
 
-AppendLogWIndow( "  ÀüÅõÁß..." )
+AppendLogWIndow( "  ì „íˆ¬ì¤‘..." )
 
-; ÀüÅõ ½ÃÀÛ°ú ÇÔ²² ·¹ÀÎÀú ¼ÒÈ¯
+; ì „íˆ¬ ì‹œì‘ê³¼ í•¨ê»˜ ë ˆì¸ì € ì†Œí™˜
 ProduceRanger(400)
 ProduceRanger(320)
 ProduceRanger(235)
@@ -115,7 +115,7 @@ If (g_isUseUnbeatable = 1)
 	SelectUnbeatable( g_isUseUnbeatable, g_isUseFriend )
 
 nNextTeamChangeTick := A_TickCount + 5500
-; ÆÀ º¯°æÇÏ¸ç ÀüÅõ°¡ Á¾·áµÉ ¶§±îÁö ´ë±â
+; íŒ€ ë³€ê²½í•˜ë©° ì „íˆ¬ê°€ ì¢…ë£Œë  ë•Œê¹Œì§€ ëŒ€ê¸°
 While ( IsFinishCombat() = 0 )
 {
 	ProduceRanger(400)
@@ -143,19 +143,19 @@ While ( IsFinishCombat() = 0 )
 		}
 	}
 }
-AppendLogWIndow( "  ÀüÅõ Á¾·á..." )
+AppendLogWIndow( "  ì „íˆ¬ ì¢…ë£Œ..." )
 
 
 bTimeout := WaitStartingRoulette()
 If ( bTimeout = 0 )
 {
-	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)ÀÇ ÀüÅõ °á°ú º¸»ó ·ê·¿ÀÌ µ¿ÀÛÇÏ´Â °ÍÀ» °¨ÁöÀÔÇÏÁö ¸øÇÏ¿´½À´Ï´Ù...
+	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)ì˜ ì „íˆ¬ ê²°ê³¼ ë³´ìƒ ë£°ë ›ì´ ë™ì‘í•˜ëŠ” ê²ƒì„ ê°ì§€ì…í•˜ì§€ ëª»í•˜ì˜€ìŠµë‹ˆë‹¤...
 	ExitApp, 0
 }
 
 
-AppendLogWIndow( "  º¸»ó ¼ö·ÉÇÏ±â" )
-AcceptClearBonus( g_arrWaitColor ) ; º¸»ó ¼ö·É
+AppendLogWIndow( "  ë³´ìƒ ìˆ˜ë ¹í•˜ê¸°" )
+AcceptClearBonus( g_arrWaitColor ) ; ë³´ìƒ ìˆ˜ë ¹
 
 Sleep 2000
 

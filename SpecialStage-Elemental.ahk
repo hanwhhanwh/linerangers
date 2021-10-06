@@ -3,7 +3,7 @@
 ; @author hbesthee@naver.com
 ; @date 2020-06-26
 ;
-; @description SPECIAL STAGE : Three Elemental stages¸¦ À§ÇÑ ÅëÇÕ ½ºÅ©¸³Æ®
+; @description SPECIAL STAGE : Three Elemental stagesë¥¼ ìœ„í•œ í†µí•© ìŠ¤í¬ë¦½íŠ¸
 ;
 ;===============================================================================
 
@@ -15,16 +15,16 @@
 
 if ( !InitializeLineRangers() )
 {
-	MsgBox LineRangers ½ºÅ©¸³Æ® ÃÊ±âÈ­ ½ÇÆĞ!!!
+	MsgBox LineRangers ìŠ¤í¬ë¦½íŠ¸ ì´ˆê¸°í™” ì‹¤íŒ¨!!!
 	ExitApp, 0
 }
 
 g_nStartingMinute := Mod(A_Min, 10)
 g_nStartCombat := 0
-g_nDelayForNextCombat := 0 ; ´ÙÀ½ ÀüÅõ¸¦ ½ÃÀÛÇÏ±â Àü¿¡ ´ë±âÇÒ ½Ã°£(´ÜÀ§ : ºĞ)
-g_nUseTornado := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ Åä³×ÀÌµµ(Tornado)¸¦ »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
-g_nUseIceShot := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ ¾ÆÀÌ½º¼¦(Ice Shot)À» »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
-g_nUseUseMeteor := 0 ; ÀüÅõ¿¡ ÁøÀÔÇÑ ÈÄ, ÁöÁ¤µÈ ½Ã°£ ÈÄ(´ÜÀ§:ÃÊ)¿¡ ¸ŞÅ×¿À(Meteor)¸¦ »ç¿ëÇÔ. 0ÀÌ¸é »ç¿ë¾ÈÇÔ
+g_nDelayForNextCombat := 0 ; ë‹¤ìŒ ì „íˆ¬ë¥¼ ì‹œì‘í•˜ê¸° ì „ì— ëŒ€ê¸°í•  ì‹œê°„(ë‹¨ìœ„ : ë¶„)
+g_nUseTornado := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— í† ë„¤ì´ë„(Tornado)ë¥¼ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
+g_nUseIceShot := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— ì•„ì´ìŠ¤ìƒ·(Ice Shot)ì„ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
+g_nUseUseMeteor := 0 ; ì „íˆ¬ì— ì§„ì…í•œ í›„, ì§€ì •ëœ ì‹œê°„ í›„(ë‹¨ìœ„:ì´ˆ)ì— ë©”í…Œì˜¤(Meteor)ë¥¼ ì‚¬ìš©í•¨. 0ì´ë©´ ì‚¬ìš©ì•ˆí•¨
 
 
 
@@ -38,7 +38,7 @@ CloseTeamviewer()
 
 
 
-; ÀÔÀåÇÏ¿© Ã³¸®ÇÒ ´Ü°è¿¡ ´ëÇÑ Á¤º¸ ; [ [x, y, stage_num], ... ]
+; ì…ì¥í•˜ì—¬ ì²˜ë¦¬í•  ë‹¨ê³„ì— ëŒ€í•œ ì •ë³´ ; [ [x, y, stage_num], ... ]
 ;g_arrStages := [ [675, 242, 6], [673, 184, 5], [610, 105, 4], [518, 105, 3], [452, 163, 2], [438, 238, 1] ]
 ;g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4], [190, 120, 3], [125, 180, 2], [132, 267, 1] ]
 g_arrStages := [ [358, 269, 6], [358, 183, 5], [287, 120, 4] ]
@@ -65,10 +65,10 @@ nStage := g_arrStages[nSpecialStage][3]
 
 
 ClickClientPoint( nX, nY, 5000 )
-AppendLogWIndow( "#" . nStage . ") Special Stage(Elemental) ·ÎÀÇ ÁøÀÔ......" )
+AppendLogWIndow( "#" . nStage . ") Special Stage(Elemental) ë¡œì˜ ì§„ì…......" )
 
 
-; Stage¿¡ ¸Â´Â È¯°æ¼³Á¤ Á¤º¸¸¦ ´Ù½Ã ÀĞ¾î¿È
+; Stageì— ë§ëŠ” í™˜ê²½ì„¤ì • ì •ë³´ë¥¼ ë‹¤ì‹œ ì½ì–´ì˜´
 strStageName := "SPECIAL_STAGE_ELEMENTAL" . nStage
 AutoCombatSpecialStage( strStageName )
 
