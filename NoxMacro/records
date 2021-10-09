@@ -14,8 +14,44 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "9",
+        "priority": "0",
         "time": "1591745411"
+    },
+    "4a547bceceb7455d94d8fd03923874cc": {
+        "combination": "false",
+        "name": "6성 100만들기",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "19",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "11",
+        "time": "1633347484"
+    },
+    "6363c038e31244f4b14081201b9bf797": {
+        "combination": "false",
+        "name": "7성 합성",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "20",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "8",
+        "time": "1633042112"
     },
     "65830e07369d440bb403d4c1beb4c506": {
         "combination": "false",
@@ -32,8 +68,26 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "8",
+        "priority": "4",
         "time": "1600059098"
+    },
+    "a19bd023cd764ebdb89e3447ac0b2010": {
+        "combination": "false",
+        "name": "4개 합성",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "10",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "12",
+        "time": "1633653464"
     },
     "d584ce56839445c097170fa1c6ea32fc": {
         "combination": "false",
@@ -46,11 +100,11 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "25",
+            "repeatTimes": "15",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "2",
+        "priority": "7",
         "time": "1626821153"
     },
     "e64211fc551841e9909f764169dfb0b2": {
@@ -68,7 +122,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "4",
+        "priority": "5",
         "time": "1617625794"
     },
     "edda783e2e794605a65aedbce4dedb45": {
@@ -86,7 +140,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "7",
+        "priority": "2",
         "time": "1601942465"
     },
     "f3b711cdc5b342fb88ab8fbe9ee0aa7e": {
@@ -104,7 +158,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "0",
+        "priority": "1",
         "time": "1627794806"
     },
     "f63f79a766d342059eeccec98c2c9f7e": {
@@ -122,7 +176,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "6",
+        "priority": "10",
         "time": "1611917869"
     },
     "fa3a95d3c58f46c4aa7f064cecbf01c4": {
@@ -140,7 +194,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "3",
+        "priority": "6",
         "time": "1631673619"
     },
     "faec716993c047f8a5f037263e9af01f": {
@@ -158,7 +212,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "5",
+        "priority": "9",
         "time": "1612267021"
     },
     "fb2cfecd347f46ea99ca3dcb0e3c8281": {
@@ -176,7 +230,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "1",
+        "priority": "3",
         "time": "1618314461"
     }
 }
