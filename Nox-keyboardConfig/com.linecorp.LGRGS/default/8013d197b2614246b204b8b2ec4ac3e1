@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Root>
+    <Scene width="1145" horizonFlag="1" height="687" rotateAngle="0" id="com.linecorp.LGRGS" opacity="0">
+        <Item width="48" height="48" clicked_tip="" pos="591,463" finger_count="1" type="1">
+            <Key value="68" keyString="D" modifier_value="0" keyLevel="" description="">
+                <Point>615,487</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="819,86" finger_count="1" type="1">
+            <Key value="84" keyString="T" modifier_value="0" keyLevel="" description="">
+                <Point>843,110</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="36,70" finger_count="1" type="1">
+            <Key value="82" keyString="R" modifier_value="0" keyLevel="" description="">
+                <Point>60,94</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="115,68" finger_count="1" type="1">
+            <Key value="49" keyString="1" modifier_value="0" keyLevel="" description="">
+                <Point>139,92</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="197,68" finger_count="1" type="1">
+            <Key value="50" keyString="2" modifier_value="0" keyLevel="" description="">
+                <Point>221,92</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="279,66" finger_count="1" type="1">
+            <Key value="51" keyString="3" modifier_value="0" keyLevel="" description="">
+                <Point>303,90</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="358,70" finger_count="1" type="1">
+            <Key value="52" keyString="4" modifier_value="0" keyLevel="" description="">
+                <Point>382,94</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="551,544" finger_count="1" type="1">
+            <Key value="70" keyString="F" modifier_value="0" keyLevel="" description="">
+                <Point>575,568</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="663,527" finger_count="1" type="1">
+            <Key value="71" keyString="G" modifier_value="0" keyLevel="" description="">
+                <Point>687,551</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="773,530" finger_count="1" type="1">
+            <Key value="72" keyString="H" modifier_value="0" keyLevel="" description="">
+                <Point>797,554</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="302,529" finger_count="1" type="1">
+            <Key value="65" keyString="A" modifier_value="0" keyLevel="" description="">
+                <Point>326,553</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="423,530" finger_count="1" type="1">
+            <Key value="83" keyString="S" modifier_value="0" keyLevel="" description="">
+                <Point>447,554</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="899,279" finger_count="1" type="1">
+            <Key value="69" keyString="E" modifier_value="0" keyLevel="" description="">
+                <Point>923,303</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="187,237" finger_count="1" type="1">
+            <Key value="87" keyString="W" modifier_value="0" keyLevel="" description="">
+                <Point>211,261</Point>
+            </Key>
+        </Item>
+        <Item width="48" height="48" clicked_tip="" pos="918,64" finger_count="1" type="1">
+            <Key value="89" keyString="Y" modifier_value="0" keyLevel="" description="">
+                <Point>942,88</Point>
+            </Key>
+        </Item>
+    </Scene>
+</Root>
