@@ -292,10 +292,12 @@ WaitNextButtonOnFriendSelection( nWaitingSeconds := 30 )
 	nLoopTotal := nWaitingSeconds * 5
 	While ( nLoopCount < nLoopTotal )
 	{
-		If ( IsSameColorSet(g_arrColorSetStartButton) )
+;		If ( IsSameColorSet(g_arrColorSetStartButton) )
+		If ( IsSimilarColorSet(g_arrColorSetStartButton, 10) )
 			break
 
-		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+;		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		If ( IsSimilarColorSet(g_arrColorSetIsRetry, 10) )
 		{
 			ClickClientPoint( g_ptRetryButton[0], g_ptRetryButton[1] )
 			Sleep 1500
@@ -328,17 +330,20 @@ WaitNextButtonOnItemSelection( nWaitingSeconds := 30 )
 	nLoopTotal := nWaitingSeconds * 5
 	While ( nLoopCount < nLoopTotal )
 	{
-		If ( IsSameColorSet(g_arrColorSetNextButton) )
+;		If ( IsSameColorSet(g_arrColorSetNextButton) )
+		If ( IsSimilarColorSet(g_arrColorSetNextButton, 10) )
 			break
 
-		If ( IsSameColorSet(g_arrColorSetCloseButton) )
+;		If ( IsSameColorSet(g_arrColorSetCloseButton) )
+		If ( IsSimilarColorSet(g_arrColorSetCloseButton, 10) )
 		{
 			AppendLogWindow( "    파워업 레인저창 닫기")
 			ClickClientPoint( g_arrColorSetCloseButton[1][1], g_arrColorSetCloseButton[1][2] )
 			;ActivateClick( g_arrColorSetCloseButton[0][0], g_arrColorSetCloseButton[0][1] )
 		}
 
-		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+;		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		If ( IsSimilarColorSet(g_arrColorSetIsRetry, 10) )
 		{
 			ClickClientPoint( g_ptRetryButton[0], g_ptRetryButton[1] )
 			Sleep 1500
@@ -395,17 +400,20 @@ WaitStartingCombat( nWaitingSeconds := 30 )
 	While ( nLoopCount < nLoopTotal )
 	{
 		; 깃털이 부족한지 확인함
-		if ( IsSameColorSet (arrColorSetOkButton) )
+;		if ( IsSameColorSet (arrColorSetOkButton) )
+		if ( IsSimilarColorSet (arrColorSetOkButton, 10) )
 		{
 			AppendLogWIndow( "    깃털이 부족하여 대기 종료!!!")
 			MsgBox, 전투로 진입하기 위한 깃털이 부족하여 종료합니다...
 			return -1
 		}
 
-		If ( IsSameColorSet(g_arrColorSetStartingCombat) )
+;		If ( IsSameColorSet(g_arrColorSetStartingCombat) )
+		If ( IsSimilarColorSet(g_arrColorSetStartingCombat, 10) )
 			break
 
-		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+;		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		If ( IsSimilarColorSet(g_arrColorSetIsRetry, 10) )
 		{
 			ClickClientPoint( g_ptRetryButton[0], g_ptRetryButton[1] )
 			Sleep 1500
@@ -513,7 +521,8 @@ WaitStartingRoulette( nWaitingSeconds := 60 )
 	nLoopTotal := nWaitingSeconds * 10
 	While ( nLoopCount < nLoopTotal )
 	{
-		If ( IsSameColorSet( g_arrColorSetStartingRoulette ) )
+;		If ( IsSameColorSet( g_arrColorSetStartingRoulette ) )
+		If ( IsSimilarColorSet( g_arrColorSetStartingRoulette, 10 ) )
 			break
 
 		;ClickClientPoint( 370, 372, 500 )

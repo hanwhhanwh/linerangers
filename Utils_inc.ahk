@@ -874,10 +874,12 @@ WaitColorSet( arrWaitingColorSet, nWaitingSeconds := 60 )
 
 	While ( nLoopCount < nLoopTotal )
 	{
-		If ( IsSameColorSet(arrWaitingColorSet) )
+;		If ( IsSameColorSet(arrWaitingColorSet) )
+		If ( IsSimilarColorSet(arrWaitingColorSet, 10) )
 			break
 
-		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+;		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		If ( IsSimilarColorSet(g_arrColorSetIsRetry, 10) )
 		{
 			ClickClientPoint( 400, 320 )
 			Sleep 1500

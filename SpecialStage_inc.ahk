@@ -34,12 +34,14 @@ SPECIAL_STAGE:
 
 
 ; Line Rangers GEAR 화면인지 확인할 때의 컬러 조합
-g_arrColorSetIsSpecialStage				:= [ [291, 405, 0xF52004], [394, 427, 0xD3170D], [504, 448, 0xA60F00] ]
+;g_arrColorSetIsSpecialStage				:= [ [291, 405, 0xF52004], [394, 427, 0xD3170D], [504, 448, 0xA60F00] ]
+g_arrColorSetIsSpecialStage				:= [ [291, 405, 0xF72000], [394, 427, 0xD61408], [504, 448, 0xA50C00] ]
 
 bTimeout := WaitColorSet(g_arrColorSetIsSpecialStage)
 ;bTimeout := WaitSpecialStage()
 If ( bTimeout = 0 )
 {
+	AppendLogWIndow( "SpecialStage > 진입실패!" )
 	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%) 화면에서 시작하여 주시기 바랍니다...
 	ExitApp, 0
 }
@@ -53,9 +55,10 @@ AppendLogWIndow( "SPECIAL STAGE >> ENTER 클릭" )
 Sleep 4500
 
 ; OK 버튼 색조합 ; 오늘의 입장 횟수를 모두 사용했는지 확인하기
-g_arrColorSetOkButton			:= [ [ 350, 307, 0x00DD44 ], [404, 317, 0xFFFFFF], [447, 337, 0x009922] ]
+;g_arrColorSetOkButton			:= [ [ 350, 307, 0x00DD44 ], [404, 317, 0xFFFFFF], [447, 337, 0x009922] ]
+g_arrColorSetOkButton			:= [ [ 350, 307, 0x00DB42 ], [404, 317, 0xFFFFFF], [447, 337, 0x009A21] ]
 ;if ( IsSameColorSet(g_arrColorSetOkButton) )
-if ( IsSimilarColorSet(g_arrColorSetOkButton, 15) )
+if ( IsSimilarColorSet(g_arrColorSetOkButton, 10) )
 { ; 깃털이 더 이상 없으면, 나가서 다음 단계를 진행하도록 함
 	AppendLogWIndow( "SpecialStage > 오늘의 입장 횟수를 모두 사용했음")
 	ClickClientPoint( 404, 317, 1000 )
