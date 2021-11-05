@@ -29,10 +29,12 @@ AcceptClearBonus( arrWaitingColorSet )
 
 	While ( nLoopCount < nLoopTotal )
 	{
-		If ( IsSameColorSet(arrWaitingColorSet) )
+		;If ( IsSameColorSet(arrWaitingColorSet) )
+		If ( IsSimilarColorSet(arrWaitingColorSet, 10) )
 			break
 
-		If ( IsSameColorSet( arrColorSetReonardBonus ) )
+		;If ( IsSameColorSet( arrColorSetReonardBonus ) )
+		If ( IsSimilarColorSet(arrColorSetReonardBonus, 10) )
 		{
 			AppendLogWindow( "    *** Reonard Bonus ^^ !!! ***" )
 			Sleep 1500
@@ -48,7 +50,8 @@ AcceptClearBonus( arrWaitingColorSet )
 ;			Sleep 3500
 		}
 
-		If ( IsSameColorSet(arrColorSetGearBox) )
+		;If ( IsSameColorSet(arrColorSetGearBox) )
+		If ( IsSimilarColorSet(arrColorSetGearBox, 10) )
 		{
 			AppendLogWindow( "    --- Gear box ---" )
 ;			ClickClientPoint( 400, 400 )
@@ -57,13 +60,15 @@ AcceptClearBonus( arrWaitingColorSet )
 ;			Sleep 3500
 		}
 
-		If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		;If ( IsSameColorSet(g_arrColorSetIsRetry) )
+		If ( IsSimilarColorSet(g_arrColorSetIsRetry, 10) )
 		{ ; RETRY가 나오면, RETRY 클릭 처리
 			ClickClientPoint( g_ptRetryButton[0], g_ptRetryButton[1] )
 			Sleep 3500
 		}
 		
-		If ( IsSameColorSet(arrWaitingColorSet) )
+		;If ( IsSameColorSet(arrWaitingColorSet) )
+		If ( IsSimilarColorSet(arrWaitingColorSet, 10) )
 			break
 
 		ClickClientPoint( 400, 400 )
