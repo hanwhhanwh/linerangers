@@ -130,19 +130,42 @@ CheckAppPlayer( nInstance, isActivate := false )
 {
 	Global g_hwndAppPlayer, g_hwndAppPlayerClient, g_nClientX, g_nClientY
 	
+	g_hwndAppPlayerClient := 0
 	strTitle = AppPlayer%nInstance%
 	g_hwndAppPlayer := WinExist( strTitle )
 	If ( g_hwndAppPlayer ) 
 	{
-		if ( isActivate )
-			WinActivate, ahk_id %g_hwndAppPlayer%
-		; WinMove, 0, 0
-		Sleep 500
+		hwndChild1 := 0
+		while (1)
+		{
+			hwndChild1 := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint", hwndChild1, "str", "Qt5QWindowIcon", "str", "Nox")
+			If (hwndChild1 = 0)
+				break
 
-		hwndChild := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint", 0, "str", "Qt5QWindowIcon", "str", "Nox")
-		hwndChild2 := DllCall( "FindWindowEx", "uint", g_hwndAppPlayer, "uint", hwndChild, "str", "Qt5QWindowIcon", "str", "Nox")
-		hwndChild3 := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", 0, "str", "Qt5QWindowIcon", "str", "Nox")
-		g_hwndAppPlayerClient := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", hwndChild3, "str", "Qt5QWindowIcon", "str", "Nox")
+			hwndChild2 := 0
+			while (1)
+			{
+				hwndChild2 := DllCall( "FindWindowEx", "uint", hwndChild1, "uint", hwndChild2, "str", "Qt5QWindowIcon", "str", "Nox")
+				if (hwndChild2 = 0)
+					break
+
+				hwndChild3 := 0
+				while (1)
+				{
+					hwndChild3 := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", hwndChild3, "str", "Qt5QWindowIcon", "str", "Nox")
+					if (hwndChild3 = 0)
+						break
+
+					g_hwndAppPlayerClient := hwndChild3
+					break
+					;g_hwndAppPlayerClient := DllCall( "FindWindowEx", "uint", hwndChild2, "uint", hwndChild3, "str", "Qt5QWindowIcon", "str", "Nox")
+				}
+				if (g_hwndAppPlayerClient != 0)
+					break
+			}
+			if (g_hwndAppPlayerClient != 0)
+				break
+		}
 
 		VarSetCapacity( ptLeftTop, 8, 0 ), NumPut(ptLeftTop, 0, "Int"), NumPut(ptLeftTop, 0, "Int")
 		DllCall( "ClientToScreen", UInt, g_hwndAppPlayerClient, Ptr, &ptLeftTop )
