@@ -24,7 +24,7 @@ if ( !InitializeLineRangers() )
 ;;; Definition ColorSet ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ; Event Stage 화면인지 확인할 때의 색조합
-g_arrColorSetEventStage		:= [ [150, 355, 0xD3170D], [530, 230, 0xEB8A00], [430, 350, 0xD22B91] ]
+g_arrColorSetEventStage		:= [ [150, 355, 0xD61408], [530, 230, 0xEF8A00], [430, 350, 0xD62894] ]
 ; Event Stage 팀 설정 화면인지 확인할 때의 색조합
 g_arrColorEventTeam			:= [ [400, 415, 0x05C232], [457, 155, 0xAA7744], [250, 40, 0xFFEE44] ]
 ; 전투중인지 확인하는 색조합
