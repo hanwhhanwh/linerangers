@@ -88,6 +88,21 @@ Else If (nResult = -2)
 AppendLogWindow( "  SPECIAL STAGE >> 전투 진입 시도..." )
 ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 500 )
 
+Sleep 500
+{
+	arrFreeButton := [ [276, 346, 0xA555EF], [289, 355, 0x8C2CE7], [340, 374, 0x6B20AD] ]
+	If (IsSimilarColorSet(arrFreeButton))
+	{
+		AppendLogWindow( "  무료 광고 시청을 통한 깃털 받기" )
+		ClickClientPoint( 276, 346, 500 ) ; 무료 광고 보기
+		ClickClientPoint( 730, 50, 32000 ) ; 30초 대기 후, 광고창 닫기
+		;Sleep 30000
+		;Send, {Esc}
+		ClickClientPoint( 400, 410, 1500 ) ; 무료 깃털 받기
+		ClickClientPoint( 400, 410, 2000 ) ; 전주진입 재시도
+	}
+}
+
 
 nResult := WaitStartingCombat()
 If ( nResult = 0 )
