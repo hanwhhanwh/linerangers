@@ -1,4 +1,4 @@
-NoxPlayer Record folder = C:\Users\<USER>\AppData\Local\Nox\record
+NoxPlayer Record folder = C:\Users\<USER>\AppData\Local\Nox\record = %LOCALAPPDATA%\Nox\record
 
 How to import:
 

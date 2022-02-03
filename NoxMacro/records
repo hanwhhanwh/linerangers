@@ -28,7 +28,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "30",
+            "repeatTimes": "20",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -46,7 +46,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "10",
+            "repeatTimes": "20",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -100,7 +100,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "50",
+            "repeatTimes": "17",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -118,7 +118,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "16",
+            "repeatTimes": "30",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -226,7 +226,7 @@
             "mode": "1",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "10",
+            "repeatTimes": "15",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -262,7 +262,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "14",
+            "repeatTimes": "16",
             "restartPlayer": "false",
             "restartTime": "60"
         },
