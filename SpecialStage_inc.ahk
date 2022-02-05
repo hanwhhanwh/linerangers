@@ -95,9 +95,10 @@ Sleep 500
 	{
 		AppendLogWindow( "  무료 광고 시청을 통한 깃털 받기" )
 		ClickClientPoint( 276, 346, 500 ) ; 무료 광고 보기
-		ClickClientPoint( 730, 50, 32000 ) ; 30초 대기 후, 광고창 닫기
-		;Sleep 30000
+		; ClickClientPoint( 730, 50, 32000 ) ; 30초 대기 후, 광고창 닫기
+		Sleep 31000
 		;Send, {Esc}
+		SendBackButton()
 		ClickClientPoint( 400, 410, 1500 ) ; 무료 깃털 받기
 		ClickClientPoint( 400, 410, 2000 ) ; 전주진입 재시도
 	}
