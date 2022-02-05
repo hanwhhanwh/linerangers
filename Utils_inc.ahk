@@ -128,9 +128,10 @@ CheckOkButton( nPosX, nPosY )
 ;		AppPlayer 가 실행중이지 않으면 0, 실행중이라면 1을 반환한다.
 CheckAppPlayer( nInstance, isActivate := false )
 {
-	Global g_hwndAppPlayer, g_hwndAppPlayerClient, g_nClientX, g_nClientY
+	Global g_hwndAppPlayer, g_hwndAppPlayerClient, g_hwndAppPlayerTool, g_nClientX, g_nClientY
 	
 	g_hwndAppPlayerClient := 0
+	g_hwndAppPlayerTool := 0
 	strTitle = AppPlayer%nInstance%
 	g_hwndAppPlayer := WinExist( strTitle )
 	If ( g_hwndAppPlayer ) 
@@ -148,6 +149,9 @@ CheckAppPlayer( nInstance, isActivate := false )
 				hwndChild2 := DllCall( "FindWindowEx", "uint", hwndChild1, "uint", hwndChild2, "str", "Qt5QWindowIcon", "str", "Nox")
 				if (hwndChild2 = 0)
 					break
+
+				if (g_hwndAppPlayerTool = 0)
+					g_hwndAppPlayerTool := hwndChild2 ; 첫 번째 클라이언트를 Tool Window 핸들로 취급
 
 				hwndChild3 := 0
 				while (1)
@@ -810,6 +814,20 @@ SelectUnbeatable( isUseUnbeatable, isUseFriend )
 
 		Sleep 100
 	}
+}
+
+
+; @brief Nox Tool 윈도우에서 뒤로가기(esc) 버튼을 누릅니다.
+; @param hwndAppPlayer AppPlayer 인스턴스의 핸들
+; @param nPosX 클릭 동작을 할 X 좌표값 (절대좌표)
+; @param nPosY 클릭 동작을 할 Y 좌표값 (절대좌표)
+SendBackButton( )
+{
+	Global g_hwndAppPlayerTool
+
+	; 뒤로가기(esc) 버튼에서 마우스 선택 모의
+	PostMessage, 0x0201, 0x00000001, 0x01980015, , ahk_id %g_hwndAppPlayerTool% ; 0x0201 = WM_LBUTTONDOWN / LPARAM = (X, Y)
+	PostMessage, 0x0202, 0x00000000, 0x01980015, , ahk_id %g_hwndAppPlayerTool% ; 0x0202 = WM_LBUTTONUP
 }
 
 

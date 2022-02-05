@@ -24,6 +24,7 @@ g_strManagerFullPath := "" ; AppPlayer Manager.exe 파일에 대한 전체 경�
 g_nInstance := 1 ; App Player 인스턴스 번호 ( 1 또는 2 )
 g_hwndAppPlayer := 0 ; App Player 인스턴스의 HWND 핸들
 g_hwndAppPlayerClient := 0, g_nClientX := 0, g_nClientY := 0 ; App Player 마우스 이벤트를 처리하는 윈도우의 HWND 핸들 및 좌표
+g_hwndAppPlayerTool := 0 ; 툴 윈도우 HWND 핸들
 g_hwndLogEditControl := 0 ; 로그 기록을 위한 Edit Control의 핸들
  
 ; 스크립트별로 값이 바뀌는 전역 변수들
