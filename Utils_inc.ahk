@@ -87,14 +87,14 @@ AppendLogWindow(strMsg)
 	global g_hwndLogEditControl
 
 	FormatTime, strTime, , HH:mm:ss
-	strTime .= " " . strMsg
+	strTime .= " " . strMsg . chr(13) . chr(10)
 
-	ControlSend, , ^{End}`n, ahk_id %g_hwndLogEditControl%
+	;ControlSend, , ^{End}`n, ahk_id %g_hwndLogEditControl%
 	SendMessage, 0xC2, 0, &strTime,, ahk_id %g_hwndLogEditControl%
 
 	FormatTime, strLogFileName, , yyyyMMdd
 	strLogFileName := ".\Logs\lr-" . strLogFileName . ".log"
-	FileAppend, %strTime%`r`n, %strLogFileName%
+	FileAppend, %strTime%, %strLogFileName%
 }
 
 
