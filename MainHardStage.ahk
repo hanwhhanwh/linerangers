@@ -38,35 +38,34 @@ AppendLogWIndow( "Start [MainhardStage Hard] Script : Client Hwnd = " . g_hwndAp
 CloseTeamviewer()
 
 
-; Main-Hard Stage의 5 stage가 중앙에 보이도록 이동하기
-ClickClientPoint( 222, 430, 1500 )
-AppendLogWIndow( "click : Main-stage Hard")
-ClickClientPoint( 125, 357, 5000 )
-AppendLogWIndow( "click : Hard 6 stage")
-ClickClientPoint( 30, 40, 5000 )
-AppendLogWIndow( "click : Back")
+; Main-Hard Stage의 1 stage가 중앙에 보이도록 이동하기
+
+ClickClientPoint( 710, 430, 1000 )
+AppendLogWIndow( "click : Main-stage Hard [STAGE CHANGE]")
+ClickClientPoint( 710, 390, 1000 )
+AppendLogWIndow( "click : Main-stage Hard [STAGE 1]")
 
 Sleep 3500
 
 ; 입장하여 처리할 단계에 대한 정보 ; [ [x, y, stage_num], ... ]
-g_arr4Stages	:= [ [349, 363, 4], [457, 251, 3], [507, 256, 2], [495, 286, 1]  ]
-g_arr5Stages	:= [ [665, 350, 1], [567, 300, 2], [457, 283, 3], [349, 273, 4] ]
-g_arrStages		:= [ [300, 206, 2], [300, 206, 3], [300, 206, 4] ]
+g_arrStages		:= [ [400, 240, 1], [300, 190, 2], [290, 220, 3], [290, 225, 4], [245, 200, 5], [200, 150, 6] ]
 g_ptEnter		:= [400, 420]
 nClearStage		:= 1
 
 g_arrWaitColor	:= [[121, 427, 0x912ACE], [80, 412, 0x0B0D17], [764, 434, 0xE0D79D]]
 
+Sleep 4000
+
 
 MAIN_HARD_STAGES:
 
 
-nX := g_arr4Stages[nClearStage][1]
-nY := g_arr4Stages[nClearStage][2]
-nStage := g_arr4Stages[nClearStage][3]
+nX := g_arrStages[nClearStage][1]
+nY := g_arrStages[nClearStage][2]
+nStage := g_arrStages[nClearStage][3]
 
-ClickClientPoint( nX, nY, 5000 )
-AppendLogWIndow( "click : Hard " . nStage . " stage")
+ClickClientPoint( nX, nY, 1000 )
+AppendLogWIndow( "click : Main Hard " . nStage . " stage")
 
 Sleep 2000
 
@@ -157,6 +156,7 @@ If ( bTimeout = 0 )
 AppendLogWIndow( "  보상 수령하기" )
 AcceptClearBonus( g_arrWaitColor ) ; 보상 수령
 
+AppendLogWIndow( "  보상 수령완료 후, 대기하기" )
 Sleep 2000
 
 
