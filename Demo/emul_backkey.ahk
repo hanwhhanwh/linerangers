@@ -1,6 +1,11 @@
 #SingleInstance, Force
 SendMode Input
-SetWorkingDir, %A_ScriptDir%
+
+strMsg = "test"
+strTime .= " " . strMsg . chr(13) . chr(10)
+
+
+;SetWorkingDir, %A_ScriptDir%
 
 
 ; BACK 버튼 마우스 선택 모의
