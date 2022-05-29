@@ -84,7 +84,7 @@ AppendLogWindow( "  친구 선택 진입..." )
 ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 1500 )
 
 AppendLogWindow( "  전투 진입 시도..." )
-ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 1500 )
+ClickClientPoint( 600, g_ptEnter[2], 1500 )
 
 nResult := WaitStartingCombat()
 If ( nResult = 0 )

@@ -70,23 +70,24 @@ if ( IsSimilarColorSet(g_arrColorSetOkButton, 10) )
 }
 
 ; 전투 진입단계 자동 처리
-nResult := HandlerNextButton()
-If (nResult = -1)
-{
-	AppendLogWindow( "SpecialStage > Item 선택 화면으로 진입 실패")
-	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)의 Item 선택 화면으로 진입 실패...
-	ExitApp, 0
-}
-Else If (nResult = -2)
-{
-	AppendLogWindow( "SpecialStage > 친구 선택 화면으로 진입 실패")
-	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)의 친구 선택 화면으로 진입 실패...
-	ExitApp, 0
-}
+; nResult := HandlerNextButton()
+; If (nResult = -1)
+; {
+; 	AppendLogWindow( "SpecialStage > Item 선택 화면으로 진입 실패")
+; 	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)의 Item 선택 화면으로 진입 실패...
+; 	ExitApp, 0
+; }
+; Else If (nResult = -2)
+; {
+; 	AppendLogWindow( "SpecialStage > 친구 선택 화면으로 진입 실패")
+; 	MsgBox, AppPlayer%g_nInstance% SPECIAL stage(%strStageName%)의 친구 선택 화면으로 진입 실패...
+; 	ExitApp, 0
+; }
+ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 500 )
 
 
 AppendLogWindow( "  SPECIAL STAGE >> 전투 진입 시도..." )
-ClickClientPoint( g_ptEnter[1], g_ptEnter[2], 500 )
+ClickClientPoint( 600, g_ptEnter[2], 1500 )
 
 Sleep 500
 {
@@ -100,7 +101,7 @@ Sleep 500
 		;Send, {Esc}
 		SendBackButton()
 		ClickClientPoint( 400, 410, 1500 ) ; 무료 깃털 받기
-		ClickClientPoint( 400, 410, 2000 ) ; 전주진입 재시도
+		ClickClientPoint( 600, 410, 2000 ) ; 전주진입 재시도
 	}
 }
 
