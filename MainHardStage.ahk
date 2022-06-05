@@ -99,7 +99,7 @@ else if ( bTimeout = -1 )
 	ExitApp, 0 ; 깃털이 더 이상 없음
 }
 
-AppendLogWIndow( "  전투중..." )
+AppendLogWIndow( "  combatting..." )
 
 ; 전투 시작과 함께 레인저 소환
 ProduceRanger(400)
@@ -142,7 +142,7 @@ While ( IsFinishCombat() = 0 )
 		}
 	}
 }
-AppendLogWIndow( "  전투 종료..." )
+AppendLogWIndow( "  finish combat..." )
 
 
 bTimeout := WaitStartingRoulette()
@@ -153,10 +153,10 @@ If ( bTimeout = 0 )
 }
 
 
-AppendLogWIndow( "  보상 수령하기" )
+AppendLogWIndow( "  accept clear bonus" )
 AcceptClearBonus( g_arrWaitColor ) ; 보상 수령
 
-AppendLogWIndow( "  보상 수령완료 후, 대기하기" )
+AppendLogWIndow( "  Complete accept clear bonus, wait..." )
 Sleep 2000
 
 
