@@ -4,10 +4,10 @@
 ; @date 2020-06-12
 ; @encode EUC-KR
 ;
-; @description Event Stage Ã³¸® ÀÚµ¿È­ ½ºÅ©¸³Æ®.
-;		"Event Stage" È­¸é¿¡¼­ ½ºÅ©¸³Æ®¸¦ µ¿ÀÛ½ÃÄÑ¾ß ÇÔ.
-;		½ÇÇà Àü¿¡ EventTeamÀº ¼³Á¤µÇ¾î ÀÖ¾î¾ß¸¸ ÇÔ.
-;		LineRangers.ini ÆÄÀÏÀÇ "[EVENT_STAGE]" ¼½¼Ç¿¡¼­ ºÎ°¡ÀûÀÎ ¼³Á¤À» ÇÒ ¼ö ÀÖÀ½
+; @description Event Stage ì²˜ë¦¬ ìë™í™” ìŠ¤í¬ë¦½íŠ¸.
+;		"Event Stage" í™”ë©´ì—ì„œ ìŠ¤í¬ë¦½íŠ¸ë¥¼ ë™ì‘ì‹œì¼œì•¼ í•¨.
+;		ì‹¤í–‰ ì „ì— EventTeamì€ ì„¤ì •ë˜ì–´ ìˆì–´ì•¼ë§Œ í•¨.
+;		LineRangers.ini íŒŒì¼ì˜ "[EVENT_STAGE]" ì„¹ì…˜ì—ì„œ ë¶€ê°€ì ì¸ ì„¤ì •ì„ í•  ìˆ˜ ìˆìŒ
 ;===============================================================================
 
 #include Global.ahk
@@ -23,13 +23,13 @@ if ( !InitializeLineRangers() )
 
 ;;; Definition ColorSet ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Event Stage È­¸éÀÎÁö È®ÀÎÇÒ ¶§ÀÇ »öÁ¶ÇÕ
+; Event Stage í™”ë©´ì¸ì§€ í™•ì¸í•  ë•Œì˜ ìƒ‰ì¡°í•©
 g_arrColorSetEventStage		:= [ [150, 355, 0xD61408], [530, 230, 0xEF8A00], [430, 350, 0xD62894] ]
-; Event Stage ÆÀ ¼³Á¤ È­¸éÀÎÁö È®ÀÎÇÒ ¶§ÀÇ »öÁ¶ÇÕ
+; Event Stage íŒ€ ì„¤ì • í™”ë©´ì¸ì§€ í™•ì¸í•  ë•Œì˜ ìƒ‰ì¡°í•©
 g_arrColorEventTeam			:= [ [400, 415, 0x05C232], [457, 155, 0xAA7744], [250, 40, 0xFFEE44] ]
-; ÀüÅõÁßÀÎÁö È®ÀÎÇÏ´Â »öÁ¶ÇÕ
+; ì „íˆ¬ì¤‘ì¸ì§€ í™•ì¸í•˜ëŠ” ìƒ‰ì¡°í•©
 g_arrColorBattle			:= [ [237, 268, 0x17110B], [238, 382, 0x3A1B00], [239, 381, 0x50320F] ]
-; ÀüÅõ°¡ Á¾·áµÇ¾ú´ÂÁö È®ÀÎÇÏ´Â »öÁ¶ÇÕ
+; ì „íˆ¬ê°€ ì¢…ë£Œë˜ì—ˆëŠ”ì§€ í™•ì¸í•˜ëŠ” ìƒ‰ì¡°í•©
 g_arrColorEventStageResult	:= [ [519, 156, 0xFF0000], [447, 164, 0xFFE63D], [255, 155, 0x8F0000] ]
 
 g_arrColorHeal		:= [ [170, 55, 0x979797] ]
@@ -38,7 +38,7 @@ g_arrColorShield	:= [ [270, 65, 0x979797] ]
 
 
 
-CheckAppPlayer( g_nInstance, false ) ; ½ÇÇà ÀÎ½ºÅÏ½º¸¦ È°¼ºÈ­
+CheckAppPlayer( g_nInstance, false ) ; ì‹¤í–‰ ì¸ìŠ¤í„´ìŠ¤ë¥¼ í™œì„±í™”
 CreateLogWindow()
 AppendLogWindow( "Start EVENT_STAGE Script : Client Hwnd = " . g_hwndAppPlayerClient . " Client X = " . g_nClientX . " | Client Y = " . g_nClientY )
 
@@ -50,6 +50,7 @@ if ( !IsSimilarColorSet( g_arrColorSetEventStage ) )
 }
 
 g_nBattleCount := 0
+nFreeAdvCount := 0
 
 EVENT_STAGE_LOOP:
 
@@ -75,6 +76,24 @@ if ( WaitColorSet( g_arrColorEventTeam, 30 ) = 0 )
 }
 
 ClickClientPoint( 400, 415, 500 ) ; Click "START"
+
+Sleep 500
+{
+	arrFreeButton := [ [276, 346, 0xA555EF], [289, 355, 0x8C2CE7], [340, 374, 0x6B20AD] ]
+	If (IsSimilarColorSet(arrFreeButton))
+	{
+		nFreeAdvCount := nFreeAdvCount + 1
+		AppendLogWindow( "  ë¬´ë£Œ ê´‘ê³  ì‹œì²­ì„ í†µí•œ ê¹ƒí„¸ ë°›ê¸° #" + nFreeAdvCount )
+		ClickClientPoint( 276, 346, 500 ) ; ë¬´ë£Œ ê´‘ê³  ë³´ê¸°
+		; ClickClientPoint( 730, 50, 32000 ) ; 30ì´ˆ ëŒ€ê¸° í›„, ê´‘ê³ ì°½ ë‹«ê¸°
+		Sleep 31500
+		;Send, {Esc}
+		SendBackButton()
+		ClickClientPoint( 400, 410, 1500 ) ; ë¬´ë£Œ ê¹ƒí„¸ ë°›ê¸°
+		ClickClientPoint( 600, 410, 2000 ) ; ì „íˆ¬ì§„ì… ì¬ì‹œë„
+	}
+}
+
 
 ;;; In battle : Produce Rangers / Use Items
 g_nBattleCount := g_nBattleCount + 1
