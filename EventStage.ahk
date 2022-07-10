@@ -90,7 +90,7 @@ Sleep 500
 		;Send, {Esc}
 		SendBackButton()
 		ClickClientPoint( 400, 410, 1500 ) ; 무료 깃털 받기
-		ClickClientPoint( 600, 410, 2000 ) ; 전투진입 재시도
+		ClickClientPoint( 400, 410, 2000 ) ; 전투진입 재시도
 	}
 }
 
