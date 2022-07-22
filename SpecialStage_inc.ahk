@@ -130,9 +130,9 @@ AppendLogWIndow( "  전투중..." )
 
 ;ZoomOut( g_isInGameZoom ) ; 전장 전체 보기
 
-Sleep 2500 ; 자동 전투에서 무적 사용전 잠시 대기하기
 
 If (g_isUseUnbeatable = 1)
+	Sleep 2500 ; 자동 전투에서 무적 사용전 잠시 대기하기
 	SelectUnbeatable( g_isUseUnbeatable, g_isUseFriend )
 If ( g_isUseFriend )
 { ; 친구 부르기
