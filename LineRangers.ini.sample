@@ -36,7 +36,7 @@ DelayUsingShield=7000
 UseFriend=0
 UpgradeMineral=0
 InGameZoom=1
-IsChangingTeam=0
+IsChangingTeam=1
 PeriodOfChangingTeam=3300
 UseUnbeatable=1
 ; 전투에 진입한 후, 지정된 시간 후(단위:초)에 토네이도(Tornado)를 사용함. 0이면 사용안함

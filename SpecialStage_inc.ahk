@@ -25,6 +25,7 @@ IniRead, g_nUseTornado, LineRangers.ini,% strStageName, UseTornado, 0
 IniRead, g_nUseIceShot, LineRangers.ini,% strStageName, UseIceShot, 0
 IniRead, g_nUseUseMeteor, LineRangers.ini,% strStageName, UseUseMeteor, 0
 IniRead, g_isChangingTeam, LineRangers.ini,% strStageName, IsChangingTeam, 1
+IniRead, g_nTermOfChangeTeam, LineRangers.ini,% strStageName, PeriodOfChangingTeam, 4500
 
 g_ptEnter		:= [400, 420]
 
@@ -150,45 +151,52 @@ COMBAT_ITEM_GAP			:= 56
 ; 팀 변경하며 전투가 종료될 때까지 대기
 While ( IsFinishCombat() = 0 )
 {
-	Loop, 30 ; = Sleep 3600
-	{
-		nCurrentTick := A_TickCount
-		If ( (g_nUseTornado > 0) And (isUseTornado = 0) And ( (nCurrentTick - g_nStartCombat) > (g_nUseTornado * 1000) ) )
-		{ ; Tornado 아이템 사용하기
-			isUseTornado := 1
-			nItemStartX := COMBAT_ITEM_START_X + COMBAT_ITEM_GAP * 2
-			If ( g_isUseFriend )
-				nItemStartX += COMBAT_ITEM_GAP
-			ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
-			ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
-			strMsg = "g_nUseTornado = %g_nUseTornado%,  nItemStartX = %nItemStartX%  COMBAT_ITEM_Y = %COMBAT_ITEM_Y%"
-			AppendLogWIndow( strMsg )
-		}
-
-		If ( (g_nUseIceShot > 0) And (isUseUseIceShot = 0) And ( (nCurrentTick - g_nStartCombat) > (g_nUseIceShot * 1000) ) )
-		{ ; IceShot 아이템 사용하기
-			isUseUseIceShot := 1
-			nItemStartX := COMBAT_ITEM_START_X + COMBAT_ITEM_GAP * 1
-			If ( g_isUseFriend )
-				nItemStartX += COMBAT_ITEM_GAP
-			ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
-			ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
-			strMsg = "g_nUseIceShot = %g_nUseIceShot%,  nItemStartX = %nItemStartX%  COMBAT_ITEM_Y = %COMBAT_ITEM_Y%"
-			AppendLogWIndow( strMsg )
-		}
-
-		Sleep, 100 ; 3초 대기
-		If ( IsFinishCombat() )
-			Break
+	nCurrentTick := A_TickCount
+	If ( (g_nUseTornado > 0) And (isUseTornado = 0) And ( (nCurrentTick - g_nStartCombat) > (g_nUseTornado * 1000) ) )
+	{ ; Tornado 아이템 사용하기
+		isUseTornado := 1
+		nItemStartX := COMBAT_ITEM_START_X + COMBAT_ITEM_GAP * 2
+		If ( g_isUseFriend )
+			nItemStartX += COMBAT_ITEM_GAP
+		ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
+		ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
+		strMsg = "g_nUseTornado = %g_nUseTornado%,  nItemStartX = %nItemStartX%  COMBAT_ITEM_Y = %COMBAT_ITEM_Y%"
+		AppendLogWIndow( strMsg )
 	}
 
-	CloseTeamviewer()
+	If ( (g_nUseIceShot > 0) And (isUseUseIceShot = 0) And ( (nCurrentTick - g_nStartCombat) > (g_nUseIceShot * 1000) ) )
+	{ ; IceShot 아이템 사용하기
+		isUseUseIceShot := 1
+		nItemStartX := COMBAT_ITEM_START_X + COMBAT_ITEM_GAP * 1
+		If ( g_isUseFriend )
+			nItemStartX += COMBAT_ITEM_GAP
+		ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
+		ClickClientPoint( nItemStartX, COMBAT_ITEM_Y, 100 )
+		strMsg = "g_nUseIceShot = %g_nUseIceShot%,  nItemStartX = %nItemStartX%  COMBAT_ITEM_Y = %COMBAT_ITEM_Y%"
+		AppendLogWIndow( strMsg )
+	}
+
+	ProduceRanger(400)
+
+	ProduceRanger(320)
+
+	ProduceRanger(235)
+
+	ProduceRanger(485)
+
+	ProduceRanger(570)
+
+	if ( g_isChangingTeam )
+	{
+		if (nNextTeamChangeTick < A_TickCount)
+		{
+			nNextTeamChangeTick := A_TickCount + g_nTermOfChangeTeam
+			ClickClientPoint( 42, 50 )
+		}
+	}
 
 	If ( IsFinishCombat() )
 		Break
-
-	if ( g_isChangingTeam )
-		ClickClientPoint( 42, 50 )
 }
 AppendLogWIndow( "전투 종료..." )
 
