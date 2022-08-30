@@ -14,7 +14,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "3",
+        "priority": "2",
         "time": "1591745411"
     },
     "4a547bceceb7455d94d8fd03923874cc": {
@@ -28,11 +28,11 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "20",
+            "repeatTimes": "15",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "14",
+        "priority": "13",
         "time": "1633347484"
     },
     "57349de00b094d1896729634e7dcab17": {
@@ -68,7 +68,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "11",
+        "priority": "10",
         "time": "1633042112"
     },
     "65830e07369d440bb403d4c1beb4c506": {
@@ -89,23 +89,23 @@
         "priority": "7",
         "time": "1600059098"
     },
-    "835ede5b839c4902ba2450c071953301": {
+    "9a3418b8d1fd44c6becb07902fdc0346": {
         "combination": "false",
-        "name": "나의 기록1",
+        "name": "민첩(2성)",
         "needShow": "true",
         "new": "false",
         "playSet": {
             "accelerator": "1",
             "interval": "0",
-            "mode": "0",
+            "mode": "1",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "17",
+            "repeatTimes": "1",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "2",
-        "time": "1634769716"
+        "priority": "0",
+        "time": "1659247721"
     },
     "a19bd023cd764ebdb89e3447ac0b2010": {
         "combination": "false",
@@ -118,11 +118,11 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "30",
+            "repeatTimes": "20",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "15",
+        "priority": "14",
         "time": "1633653464"
     },
     "d584ce56839445c097170fa1c6ea32fc": {
@@ -140,26 +140,8 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "10",
+        "priority": "9",
         "time": "1626821153"
-    },
-    "e4f8baacd59b482caf12568b2521f1df": {
-        "combination": "false",
-        "name": "민첩2성",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "1",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "1",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "0",
-        "time": "1640931918"
     },
     "e64211fc551841e9909f764169dfb0b2": {
         "combination": "false",
@@ -176,7 +158,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "8",
+        "priority": "4",
         "time": "1617625794"
     },
     "edda783e2e794605a65aedbce4dedb45": {
@@ -194,7 +176,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "4",
+        "priority": "5",
         "time": "1601942465"
     },
     "f3b711cdc5b342fb88ab8fbe9ee0aa7e": {
@@ -212,7 +194,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "5",
+        "priority": "3",
         "time": "1627794806"
     },
     "f63f79a766d342059eeccec98c2c9f7e": {
@@ -226,11 +208,11 @@
             "mode": "1",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "15",
+            "repeatTimes": "25",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "13",
+        "priority": "12",
         "time": "1611917869"
     },
     "fa3a95d3c58f46c4aa7f064cecbf01c4": {
@@ -248,7 +230,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "9",
+        "priority": "8",
         "time": "1631673619"
     },
     "faec716993c047f8a5f037263e9af01f": {
@@ -266,7 +248,7 @@
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "12",
+        "priority": "11",
         "time": "1612267021"
     },
     "fb2cfecd347f46ea99ca3dcb0e3c8281": {
