@@ -89,6 +89,14 @@ Sleep 500
 		Sleep 31500
 		;Send, {Esc}
 		SendBackButton()
+		Sleep 3500
+		arrOkButton := [ [328, 395, 0x00DB42], [404, 408, 0xFFFFFF], [448, 432, 0x009A21] ]
+		If (!IsSimilarColorSet(arrFreeButton))
+		{
+			SendBackButton()
+			Sleep 1500
+		}	
+
 		ClickClientPoint( 400, 410, 1500 ) ; 무료 깃털 받기
 		ClickClientPoint( 400, 410, 2000 ) ; 전투진입 재시도
 	}
