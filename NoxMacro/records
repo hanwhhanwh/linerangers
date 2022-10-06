@@ -35,24 +35,6 @@
         "priority": "13",
         "time": "1633347484"
     },
-    "57349de00b094d1896729634e7dcab17": {
-        "combination": "false",
-        "name": "5개 팔기",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "0",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "20",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "1",
-        "time": "1640732472"
-    },
     "6363c038e31244f4b14081201b9bf797": {
         "combination": "false",
         "name": "7성 합성",
@@ -64,7 +46,7 @@
             "mode": "0",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "20",
+            "repeatTimes": "8",
             "restartPlayer": "false",
             "restartTime": "60"
         },
@@ -100,11 +82,11 @@
             "mode": "1",
             "playOnStart": "false",
             "playSeconds": "0#0#0",
-            "repeatTimes": "1",
+            "repeatTimes": "21",
             "restartPlayer": "false",
             "restartTime": "60"
         },
-        "priority": "0",
+        "priority": "1",
         "time": "1659247721"
     },
     "a19bd023cd764ebdb89e3447ac0b2010": {
@@ -125,6 +107,24 @@
         "priority": "14",
         "time": "1633653464"
     },
+    "c3a05e77090546bc8583e95b0f521d7f": {
+        "combination": "false",
+        "name": "6성 레벨업(9)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "9",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "11",
+        "time": "1663202603"
+    },
     "d584ce56839445c097170fa1c6ea32fc": {
         "combination": "false",
         "name": "깃털-친구",
@@ -142,6 +142,24 @@
         },
         "priority": "9",
         "time": "1626821153"
+    },
+    "dd597e2437c442e0b7142989c924c926": {
+        "combination": "false",
+        "name": "나의 기록1",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "5",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "0",
+        "time": "1664515042"
     },
     "e64211fc551841e9909f764169dfb0b2": {
         "combination": "false",
@@ -179,6 +197,24 @@
         "priority": "5",
         "time": "1601942465"
     },
+    "f0f8252cffca4352a94e2e5dd5d7cf45": {
+        "combination": "false",
+        "name": "6성 레벨업(5)",
+        "needShow": "true",
+        "new": "false",
+        "playSet": {
+            "accelerator": "1",
+            "interval": "0",
+            "mode": "0",
+            "playOnStart": "false",
+            "playSeconds": "0#0#0",
+            "repeatTimes": "7",
+            "restartPlayer": "false",
+            "restartTime": "60"
+        },
+        "priority": "12",
+        "time": "1664469161"
+    },
     "f3b711cdc5b342fb88ab8fbe9ee0aa7e": {
         "combination": "false",
         "name": "레이드",
@@ -197,24 +233,6 @@
         "priority": "3",
         "time": "1627794806"
     },
-    "f63f79a766d342059eeccec98c2c9f7e": {
-        "combination": "false",
-        "name": "6성 레벨업(5)",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "1",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "25",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "12",
-        "time": "1611917869"
-    },
     "fa3a95d3c58f46c4aa7f064cecbf01c4": {
         "combination": "false",
         "name": "지능(2성)",
@@ -232,24 +250,6 @@
         },
         "priority": "8",
         "time": "1631673619"
-    },
-    "faec716993c047f8a5f037263e9af01f": {
-        "combination": "false",
-        "name": "6성 레벨업(9)",
-        "needShow": "true",
-        "new": "false",
-        "playSet": {
-            "accelerator": "1",
-            "interval": "0",
-            "mode": "0",
-            "playOnStart": "false",
-            "playSeconds": "0#0#0",
-            "repeatTimes": "16",
-            "restartPlayer": "false",
-            "restartTime": "60"
-        },
-        "priority": "11",
-        "time": "1612267021"
     },
     "fb2cfecd347f46ea99ca3dcb0e3c8281": {
         "combination": "false",
