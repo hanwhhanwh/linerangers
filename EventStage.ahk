@@ -82,7 +82,7 @@ Sleep 500
 	arrFreeButton := [ [276, 346, 0xA555EF], [289, 355, 0x8C2CE7], [340, 374, 0x6B20AD] ]
 	If (IsSimilarColorSet(arrFreeButton))
 	{
-		nFreeAdvCount := nFreeAdvCount + 1
+		static nFreeAdvCount := nFreeAdvCount + 1
 		AppendLogWindow( "  무료 광고 시청을 통한 깃털 받기 #" + nFreeAdvCount )
 		ClickClientPoint( 276, 346, 500 ) ; 무료 광고 보기
 		; ClickClientPoint( 730, 50, 32000 ) ; 30초 대기 후, 광고창 닫기
